@@ -1,0 +1,194 @@
+hostname = *.music.163.com,music.163.com,*.music.126.net,music.126.net,mobwsa.ximalaya.com,*.y.qq.com,ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve.weibo.com,*.video.qq.com,*.rrys2019.com,account.wps.cn,amdc.m.taobao.com,api.gamer.com.tw,api.m.jd.com,api.meiease.c*,api.picsart.c*,api.resso.app,api.vuevideo.net,api.weibo.cn,apic.musixmatch.com,license.pdfexpert.com,mapi.weibo.com,mp.weixin.qq.com,music.163.com,newdrugs.dxy.cn,trade-acs.m.taobao.com,sk.ulysses.app,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, api.bilibili.com, app.bilibili.com, *.zhihu.com, aweme*.snssdk.com, *.kuwo.cn, ios.xiaoxiaoapps.com, api*.tiktokv.com, *.musical.ly, *.amemv.com, p.du.163.com, getuserinfo.321mh.com, getuserinfo-globalapi.zymk.cn, ios.fuliapps.com, vsco.co, api.vnision.com, *.my10api.com, sp.kaola.com, r.inews.qq.com, apple.fuliapps.com, newdrugs.dxy.cn, app101.avictown.cc, api.hlo.xyz, api.ijo.xyz, www.luqijianggushi.com, account.wps.cn, u.kanghuayun.com, api.gyrosco.pe, api1.dobenge.cn, api.mvmtv.com, mitaoapp.yeduapp.com, origin-prod-phoenix.jibjab.com, www.3ivf.com, pay.guoing.com, api.termius.com, api.bjxkhc.com, viva.v21xy.com, dida365.com, ticktick.com, biz.caiyunapp.com, api.gotokeep.com, ap*.intsig.net, mp.bybutter.com, api.vuevideo.net, api.picsart.c*, api.meiease.c*, splice.oracle.*.com,api.gamer.com.tw,*.xiangxiangapps.com,api.termius.com,bmall.camera360.com,photos.adobe.io, license.pdfexpert.com,apic.musixmatch.com,dayone.me,sk.ulysses.app, backend.getdrafts.com,lcs-mobile-cops.adobe.io,api.bjxkhc.com,claritywallpaper.com,*.jxedt.com,api.itranslateapp.com
+#################################################################################
+
+;Resso IN丨ID
+;(?<=(carrier|account|sim|sys)_region=)cn url 307 id
+
+;TikTok By Choler&Paris ^_^
+;(.*video_id=\w{32})(.*watermark=)(.*) url 302 $1
+;(?<=(carrier|account|sys)_region=)CN url 307 JP
+;解锁港区请取消下条注释，与美区不兼容
+;(?<=version_code=)\d{1,}.\d{1}\.\d{1} url 307 8.0.0
+
+# tiktok封区解锁
+(.*video_id=\w{32})(.*watermark=)(.*) url 302 $1
+(?<=(carrier|sys)_region=)CN url 307 JP
+(?<=version_code=)\d{1,}.\d{1}\.\d{1} url 307 15.0.0
+(?<=(carrier|account|sys|sim)_region=)cn url 307 in
+
+
+#TikTok解锁封区去水印(根据需求 复制到本地取消注释)
+;(?<=(carrier|account|sys|sim)_region=)CN url 307 JP
+#美区
+;(?<=version_code=)\d{1,}.\d{1}\.\d{1} url 307 14.0.0
+#港区
+;(?<=version_code=)\d{1,}.\d{1}\.\d{1} url 307 8.4.0
+
+
+#################################################################################
+
+;知乎网页重定向
+^https?:\/\/www\.zhihu\.com\/question\/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36$2
+
+;微博应用内去广告 (By yichahucha https://github.com/yichahucha/surge/tree/master)
+^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|\!/photos/pic_recommend_status) url script-response-body yichahucha/wb_ad.js
+^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body yichahucha/wb_launch.js
+
+;微博应用内去广告 by yichahucha
+;^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(statuses\/(unread|extend|positives\/get|(friends|video)(\/|_)timeline)|stories\/(video_stream|home_list)|(groups|fangle)\/timeline|profile\/statuses|comments\/build_comments|photo\/recommend_list|service\/picfeed|searchall|cardlist|page|\!/photos/pic_recommend_status) url script-response-body wb_ad.js
+
+;微博启动页去广告 by yichahucha
+;^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad.php|\/wbapplua\/wbpullad.lua) url script-response-body wb_launch.js
+
+
+;Netflix 获取 IMDb 分数 (IMDb、douaban）(By yichahucha https://github.com/yichahucha/surge/tree/master)
+^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D url script-request-header yichahucha/nf_rating.js
+^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D url script-response-body yichahucha/nf_rating.js
+
+;JD App 显示历史价格 (By yichahucha https://github.com/yichahucha/surge/tree/master)
+^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body yichahucha/jd_price.js
+
+;Taobao App 显示历史价格 (By yichahucha https://github.com/yichahucha/surge/tree/master)
+^https?://amdc\.m\.taobao\.com/amdc/mobileDispatch url script-response-body tb_price.js
+^https://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail url script-response-body yichahucha/tb_price.js
+
+#################################################################################
+
+;去微信公众号广告 (by Choler https://github.com/Choler/Surge)
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body Choler/WeChat.js
+
+;去微信公众号广告 (by Choler https://github.com/Choler/Surge)
+^https://aweme-eagle(.*)\.snssdk\.com\/aweme/.+/(feed|aweme/post|follow/feed)/ url script-response-body Choler/Aweme.js
+
+# 网易考拉 去广告 (By Choler https://github.com/Choler/Surge)
+^https://sp\.kaola\.com/api/openad$ url script-response-body Choler/wykaola.js
+
+# 腾讯新闻 去广告 (By Choler https://github.com/Choler/Surge)
+^https://r\.inews\.qq.com\/get(QQNewsUnreadList|RecommendList) url script-response-body Choler/QNews.js
+
+#################################################################################
+
+;哔哩哔哩 App 去广告
+;by onewayticket255 https://github.com/onewayticket255/Surge-Script
+;by Primovist https://github.com/primovist/ScriptsForSurge/tree/master
+^https?:\/\/ap(i|p)\.bilibili\.com\/x\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/mine|view|feed\/index))\?access_key url script-response-body Primovist/Bilibili.js
+
+;用药助手专业版 (By Primovist https://github.com/primovist/ScriptsForSurge/tree/master)
+^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=)) url script-response-body Primovist/DingXiangDrugs.js
+
+;知乎去广告整合
+;by onewayticket255 https://github.com/onewayticket255/Surge-Script
+;by Primovist https://github.com/primovist/ScriptsForSurge/tree/master
+^https?:\/\/api\.zhihu\.com\/(moments\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people) url script-response-body /primovist/Scripts/Zhihu.js
+
+;知乎去广告 (By onewayticket255 https://github.com/onewayticket255/Surge-Script )
+;^https://api.zhihu.com/moments\?(action|feed_type) url script-response-body NobyDa/Surge/JS/Zhihu-ad-feed.js
+;^https://api.zhihu.com/topstory/recommend url script-response-body NobyDa/Surge/JS/Zhihu-ad-recommend.js
+;^https://api.zhihu.com/.*/questions url script-response-body NobyDa/Surge/JS/Zhihu-ad-answer.js
+;^https://api.zhihu.com/market/header url script-response-body NobyDa/Surge/JS/Zhihu-ad-market.js
+
+#################################################################################
+
+;WPS VIP By eHpo https://github.com/eHpo1/Surge/tree/master/Script
+^https?:\/\/account\.wps\.cn\/api\/users\/ url script-response-body eHpo1/WPS.js
+
+#################################################################################
+
+# 爱美剧Vip (by huihui）(官网：app.meiju2018.com)
+^https?:\/\/api.bjxkhc.com\/index\.php\/app\/ios\/(vod\/show|(user|vod|topic|type)\/index) url script-response-body NobyDa/QuantumultX/File/aimeiju.js
+# 广告
+^https?://api.bjxkhc.com/index.php/app/ios/ads/index url reject-dict
+^https?://api.bjxkhc.com/index.php/app/ios/ver/index_ios$ url reject
+^https?://api.bjxkhc.com/index.php/app/ios/pay/ok$ url reject-dict
+
+# Keep 解锁私人课程和动作库 (QX存在bug 该脚本可能无法生效) By NobyDa  https://github.com/NobyDa/Script/tree/master
+^https:\/\/api\.gotokeep\.com\/(.+\/subject|.+\/dynamic) url script-response-body NobyDa/Surge/JS/Keep.js
+
+# PicsArt美易 pro By NobyDa https://github.com/NobyDa/Script/tree/master
+^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json url script-response-body NobyDa/Surge/JS/PicsArt.js
+
+# 动画疯 去广告 By NobyDa https://github.com/NobyDa/Script/tree/master
+https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v3\/token\.php url script-request-header NobyDa/Surge/JS/Bahamut.js
+https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v3\/token\.php url script-response-body NobyDa/Surge/JS/Bahamut.js
+
+# Splice 视频编辑器 pro By NobyDa https://github.com/NobyDa/Script/tree/master
+^https:\/\/splice\.oracle\.\w+\.com\/devices\/me url script-response-body NobyDa/Surge/JS/Splice.js
+
+# 扫描全能王 pro By NobyDa https://github.com/NobyDa/Script/tree/master
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body NobyDa/Surge/JS/CamScanner.js
+
+# 滴答清单 pro By NobyDa https://github.com/NobyDa/Script/tree/master
+^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status url script-response-body NobyDa/QuantumultX/File/DiDaQingDan.js
+
+# 91短视频 By NobyDa https://github.com/NobyDa/Script/tree/master
+^https?:\/\/.+\.(my10api|(.*91.*))\.(com|tips|app|xyz)(:\d{2,5})?\/api.php$ url script-response-body NobyDa/QuantumultX/File/91.js
+
+# 哔哩哔哩番剧开启1080P+ By NobyDa https://github.com/NobyDa/Script/tree/master
+^https?:\/\/api\.bilibili\.com\/pgc\/player\/api\/playurl url script-response-body NobyDa/QuantumultX/File/bilifj.js
+
+;VUE Vlog Pro By NoByDa https://github.com/NobyDa/Script/tree/master
+^https?:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare) url script-response-body VUE.js
+
+# VSCO滤镜VIP NoByDa https://github.com/NobyDa/Script/tree/master
+^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body NobyDa/QuantumultX/File/vsco.js
+
+# 彩云天气 Vip NoByDa https://github.com/NobyDa/Script/tree/master
+^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather url script-response-body NobyDa/QuantumultX/File/ColorWeather.js
+
+# 扫描全能王 pro
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body NobyDa/Surge/JS/CamScanner.js
+
+# 水印精灵 vip (By Alex0510)
+^https:\/\/api1\.dobenge\.cn\/api\/user\/getuserinfo url script-response-body NobyDa/Surge/JS/syjl.js
+
+# 小影 解锁Vip (By @hiepkimcdtk55)
+^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip url script-response-body NobyDa/Surge/JS/vivavideo.js
+
+# 酷我音乐SVIP (By yxiaocai)
+^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) url script-response-body NobyDa/Surge/JS/Kuwo.js
+^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ url 302 http://musicpay.kuwo.cn/music.pay?uid=1
+
+#################################################################################
+
+# 驾校一点通 (by @superuv)
+^https:\/\/vipapi\.jxedt\.com\/vip\/check url script-response-body jxydt.js
+
+#克拉壁纸  解锁付费壁纸 (By @Dachaw)
+^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) url script-response-body clarity.js
+
+#################################################################################
+
+#document (By langkhach https://github.com/langkhach270389/Scripting)
+^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) url script-response-body langkhach/documents.js
+
+#itranslate&lingo&voice&converse(By langkhach https://github.com/langkhach270389/Scripting)
+^https:\/\/ssl-api\.itranslateapp\.com\/.*\/subscriptions\/.*\/ios$ url script-response-body langkhach/itranslate.js
+
+# Termius (By langkhach https://github.com/langkhach270389/Scripting)
+https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ url script-response-body langkhach/Terminus.js
+
+#camera360 (By langkhach https://github.com/langkhach270389/Scripting)
+^https:\/\/bmall\.camera360\.com\/api\/(iap\/check-receipt$|mix\/getinfo$) url script-response-body langkhach/camera360.vip.js
+
+#lightroom (By langkhach https://github.com/langkhach270389/Scripting)
+^https:\/\/photos\.adobe\.io\/v2\/accounts* url script-response-body langkhach/Lightroom.js
+
+#Pdfexpert (By langkhach https://github.com/langkhach270389/Scripting)
+^https:\/\/license\.pdfexpert\.com\/api\/1\.0\/pdfexpert6\/subscription\/(refresh$|check$) url script-response-body langkhach/Pdfexpert.vip.js
+
+#Musixmatch (By langkhach https://github.com/langkhach270389/Scripting)
+^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get url script-response-body langkhach/musixmatch.miao.js
+
+#dayone (By langkhach https://github.com/langkhach270389/Scripting)
+^https:\/\/dayone\.me\/api\/(users|v2\/users\/account-status)$ url script-response-body langkhach/dayone.js
+
+#ulysses (By langkhach https://github.com/langkhach270389/Scripting)
+^https:\/\/sk\.ulysses\.app\/api\/v1\/user_offers$ url request-header (\r\n)If-None-Match:.+(\r\n) request-header $1
+
+^https:\/\/sk\.ulysses\.app\/api\/v1\/itunes_receipt_verify$ url script-response-body langkhach/ulysses.js
+
+#draft (By langkhach https://github.com/langkhach270389/Scripting)
+^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* url script-response-body langkhach/draft.js
+
+#phothop&PSexpress (By langkhach https://github.com/langkhach270389/Scripting)
+^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body langkhach/photoshop.js

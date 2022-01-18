@@ -1,0 +1,17 @@
+proxies:
+  - name: MacOS-Http
+    type: http
+    server: MacOS.Router
+    port: "1080"
+  - name: MacOS-Socks
+    type: socks5
+    server: MacOS.Router
+    port: "1090"
+  - name: MacOS-Http
+    type: http
+    server: N1.Router
+    port: "1080"
+  - name: MacOS-Socks
+    type: socks5
+    server: N1.Router
+    port: "1080"
