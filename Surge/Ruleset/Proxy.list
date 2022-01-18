@@ -1,0 +1,5 @@
+proxies:
+  - {name: MacOS-Http, server: MacOS.Router, port: 1080, type: http}
+  - {name: MacOS-Socks, server: MacOS.Router, port: 1090, type: socks5}
+  - {name: N1-Http, server: N1.Router, port: 1080, type: http}
+  - {name: N1-Socks, server: N1.Router, port: 1080, type: socks5}

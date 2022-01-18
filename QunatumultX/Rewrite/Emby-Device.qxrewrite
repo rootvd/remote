@@ -1,0 +1,4 @@
+hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, *.pornemby.club, *.charontv.com, *.cjpc.cc, *.riches.cloud, *.embyclub.com, *.odysseyplus.site, *.line.emby.men, *.aaa.ax
+
+^https?:\/\/.+\.odysseyplus\.site url request-header (Device=”)iPhone(“) request-header $1Apple TV$2
+^http?:\/\/.+\.odysseyplus\.site url request-header (Device=”)iPhone(“) request-header $1Apple TV$2

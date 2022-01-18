@@ -1,0 +1,6 @@
+# > coinlist
+USER-AGENT,coinlist*,coinlist
+DOMAIN-KEYWORD,coinlist,coinlist
+DOMAIN-SUFFIX,coinlist.co,coinlist
+DOMAIN-SUFFIX,cdn.segment.com,coinlist
+DOMAIN-SUFFIX,api.segment.io,coinlist
