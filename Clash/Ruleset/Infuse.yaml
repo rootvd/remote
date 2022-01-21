@@ -1,6 +1,7 @@
 payload:
  # > subtitles
   - DOMAIN-SUFFIX, opensubtitles.org,Streaming
+  - DOMAIN-SUFFIX, trakt.tv,Streaming
  # > Plex
  # - DOMAIN-SUFFIX, plex.direct
   - DOMAIN-SUFFIX, plex.tv,Streaming
