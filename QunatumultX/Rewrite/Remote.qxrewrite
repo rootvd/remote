@@ -1,5 +1,5 @@
-hostname = *.music.163.com,music.163.com,*.music.126.net,music.126.net,mobwsa.ximalaya.com,ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve.weibo.com,*.video.qq.com,amdc.m.taobao.com,api.gamer.com.tw,api.m.jd.com,api.meiease.c*,api.picsart.c*,api.resso.app,api.vuevideo.net,api.weibo.cn,apic.musixmatch.com,license.pdfexpert.com,mapi.weibo.com,mp.weixin.qq.com,music.163.com,newdrugs.dxy.cn,trade-acs.m.taobao.com,sk.ulysses.app,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, api.bilibili.com, app.bilibili.com, aweme*.snssdk.com, *.kuwo.cn, *.musical.ly, p.du.163.com, getuserinfo.321mh.com, getuserinfo-globalapi.zymk.cn, ios.fuliapps.com, vsco.co, api.vnision.com, *.my10api.com, sp.kaola.com, r.inews.qq.com, apple.fuliapps.com, newdrugs.dxy.cn, app101.avictown.cc, account.wps.cn, u.kanghuayun.com, api.gyrosco.pe, api.mvmtv.com, mitaoapp.yeduapp.com, origin-prod-phoenix.jibjab.com, www.3ivf.com, pay.guoing.com, api.bjxkhc.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, mp.bybutter.com, api.vuevideo.net, api.picsart.c*, api.meiease.c*, splice.oracle.*.com, *.xiangxiangapps.com,bmall.camera360.com,photos.adobe.io, apic.musixmatch.com, dayone.*, sk.ulysses.app, backend.getdrafts.com,lcs-mobile-cops.adobe.io, h5.ele.me, i.meituan.com,daojia.jd.com,user.qunar.com,daojia.jd.com,gameapi.hellobike.com, passport.biligame.com,weixin110.qq.com,node.52tt.com,*.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, *.grammarly.com, api.polaxiong.com, api-cs.intsig.net,tieba.baidu.com,boxer.baidu.com,zhidao.baidu.com,*.zhihu.com,jump2.bdimg.com,app.biliintl.com,socketio.ctrip.com
-#api.termius.com  
+hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve.weibo.com,*.video.qq.com,amdc.m.taobao.com,api.gamer.com.tw,api.m.jd.com,api.meiease.c*,api.picsart.c*,api.resso.app,api.vuevideo.net,api.weibo.cn,apic.musixmatch.com,license.pdfexpert.com,mapi.weibo.com,mp.weixin.qq.com,newdrugs.dxy.cn,trade-acs.m.taobao.com,sk.ulysses.app,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, aweme*.snssdk.com, *.kuwo.cn, *.musical.ly, p.du.163.com, vsco.co, *.my10api.com, sp.kaola.com, r.inews.qq.com, account.wps.cn, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com,api.meiease.c*, splice.oracle.*.com, bmall.camera360.com,photos.adobe.io, dayone.*, sk.ulysses.app, backend.getdrafts.com,lcs-mobile-cops.adobe.io, h5.ele.me, i.meituan.com,weixin110.qq.com,*.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, *.grammarly.com, api.polaxiong.com, api-cs.intsig.net,tieba.baidu.com,boxer.baidu.com,zhidao.baidu.com,*.zhihu.com,jump2.bdimg.com,app.biliintl.com,socketio.ctrip.com,vira.llsapp.com, apiios.xiangha.com, 39.97.157.167,buy.itunes.apple.com,cutisanapi.imuuzi.com,m.douban.com
+#api.termius.com
 #################################################################################
 
 ;微信 App 内被屏蔽链接快捷跳转
@@ -119,11 +119,31 @@ https://api.zhihu.com/v4/questions url script-response-body https://raw.githubus
 
 #################################################################################
 
+# > 流利说·阅读(2022.01.16 https://github.com/I-am-R-E/QuantumultX)
+^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/LiuLiShuo-YueDu.js
+
+# > 香哈菜谱(2022.01.19 https://github.com/I-am-R-E/QuantumultX)
+^https?:\/\/apiios\.xiangha\.com\/main\d+\/ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/XiangHaCaiPu.js
+
+# > TextEditor(2022.01.21 https://github.com/I-am-R-E/QuantumultX)
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/TextEditor.js
+
+# > Cutisan解锁所有限制(2022.01.29)
+^https?:\/\/cutisanapi\.imuuzi\.com\/api\/(Index\/index|Home\/index) url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Cutisan.js
+
+# > 豆瓣电影和电视剧添加便捷播放按钮(2022.01.28https://github.com/I-am-R-E/QuantumultX)
+^https?:\/\/m\.douban\.com\/movie\/subject\/\d+\/ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/DouBan.js
+hostname = api.meiease.cn
+
+# > Picsart(2022.01.21 https://github.com/I-am-R-E/QuantumultX)
+;^https?:\/\/api\.meiease\.cn\/shop\/subscription\/validate url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Picsart.js
+
+
 # Keep 解锁私人课程和动作库 (QX存在bug 该脚本可能无法生效) By NobyDa  https://github.com/NobyDa/Script/tree/master
 ;^https:\/\/api\.gotokeep\.com\/(.+\/subject|.+\/dynamic) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Keep.js
 
 # PicsArt美易 pro By NobyDa https://github.com/NobyDa/Script/tree/master
-^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/PicsArt.js
+;^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/PicsArt.js
 
 # 动画疯 去广告 By NobyDa https://github.com/NobyDa/Script/tree/master
 #https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v3\/token\.php url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bahamut.js
@@ -164,8 +184,8 @@ https://api.zhihu.com/v4/questions url script-response-body https://raw.githubus
 # 驾校一点通 (by @superuv)
 ^https:\/\/vipapi\.jxedt\.com\/vip\/check url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/jxydt.js
 
-#克拉壁纸  解锁付费壁纸 (By @Dachaw)
-^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/clarity.js
+#克拉壁纸  解锁付费壁纸 (By https://github.com/yqc007/QuantumultX)
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/ClarityWallpaperProCrack.js
 
 #################################################################################
 
@@ -216,3 +236,5 @@ https://api.zhihu.com/v4/questions url script-response-body https://raw.githubus
 
 #phothop&PSexpress (By langkhach https://github.com/langkhach270389/Quantumult-X-LK)
 ^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/photoshop.js
+
+
