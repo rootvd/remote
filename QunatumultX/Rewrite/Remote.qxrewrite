@@ -1,5 +1,5 @@
-hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve.weibo.com,*.video.qq.com,amdc.m.taobao.com,api.gamer.com.tw,api.m.jd.com,api.meiease.c*,api.picsart.c*,api.resso.app,api.vuevideo.net,api.weibo.cn,apic.musixmatch.com,license.pdfexpert.com,mapi.weibo.com,mp.weixin.qq.com,newdrugs.dxy.cn,trade-acs.m.taobao.com,sk.ulysses.app,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, aweme*.snssdk.com, *.kuwo.cn, *.musical.ly, p.du.163.com, vsco.co, *.my10api.com, sp.kaola.com, r.inews.qq.com, account.wps.cn, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com,api.meiease.c*, splice.oracle.*.com, bmall.camera360.com,photos.adobe.io, dayone.*, sk.ulysses.app, backend.getdrafts.com,lcs-mobile-cops.adobe.io, h5.ele.me, i.meituan.com,weixin110.qq.com,*.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, *.grammarly.com, api.polaxiong.com, api-cs.intsig.net,tieba.baidu.com,boxer.baidu.com,zhidao.baidu.com,*.zhihu.com,jump2.bdimg.com,app.biliintl.com,socketio.ctrip.com,vira.llsapp.com, apiios.xiangha.com, 39.97.157.167,buy.itunes.apple.com,cutisanapi.imuuzi.com,m.douban.com
-#api.termius.com
+hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve.weibo.com,*.video.qq.com,amdc.m.taobao.com,api.gamer.com.tw,api.m.jd.com,api.meiease.c*,api.picsart.c*,api.resso.app,api.vuevideo.net,api.weibo.cn,apic.musixmatch.com,license.pdfexpert.com,mapi.weibo.com,mp.weixin.qq.com,newdrugs.dxy.cn,trade-acs.m.taobao.com,sk.ulysses.app,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, aweme*.snssdk.com, *.kuwo.cn, *.musical.ly, p.du.163.com, vsco.co, *.my10api.com, sp.kaola.com, r.inews.qq.com, account.wps.cn, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com,api.meiease.c*, splice.oracle.*.com, bmall.camera360.com,photos.adobe.io, dayone.*, sk.ulysses.app, backend.getdrafts.com,lcs-mobile-cops.adobe.io, h5.ele.me, i.meituan.com,weixin110.qq.com,*.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, *.grammarly.com, api.polaxiong.com, api-cs.intsig.net,tieba.baidu.com,boxer.baidu.com,zhidao.baidu.com,*.zhihu.com,jump2.bdimg.com,app.biliintl.com,socketio.ctrip.com
+#api.termius.com,,vira.llsapp.com, apiios.xiangha.com, 39.97.157.167,buy.itunes.apple.com,cutisanapi.imuuzi.com,m.douban.com
 #################################################################################
 
 ;微信 App 内被屏蔽链接快捷跳转
@@ -120,19 +120,19 @@ https://api.zhihu.com/v4/questions url script-response-body https://raw.githubus
 #################################################################################
 
 # > 流利说·阅读(2022.01.16 https://github.com/I-am-R-E/QuantumultX)
-^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/LiuLiShuo-YueDu.js
+;^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/LiuLiShuo-YueDu.js
 
 # > 香哈菜谱(2022.01.19 https://github.com/I-am-R-E/QuantumultX)
-^https?:\/\/apiios\.xiangha\.com\/main\d+\/ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/XiangHaCaiPu.js
+;^https?:\/\/apiios\.xiangha\.com\/main\d+\/ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/XiangHaCaiPu.js
 
 # > TextEditor(2022.01.21 https://github.com/I-am-R-E/QuantumultX)
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/TextEditor.js
+;^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/TextEditor.js
 
 # > Cutisan解锁所有限制(2022.01.29)
-^https?:\/\/cutisanapi\.imuuzi\.com\/api\/(Index\/index|Home\/index) url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Cutisan.js
+;^https?:\/\/cutisanapi\.imuuzi\.com\/api\/(Index\/index|Home\/index) url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Cutisan.js
 
 # > 豆瓣电影和电视剧添加便捷播放按钮(2022.01.28https://github.com/I-am-R-E/QuantumultX)
-^https?:\/\/m\.douban\.com\/movie\/subject\/\d+\/ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/DouBan.js
+;^https?:\/\/m\.douban\.com\/movie\/subject\/\d+\/ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/DouBan.js
 hostname = api.meiease.cn
 
 # > Picsart(2022.01.21 https://github.com/I-am-R-E/QuantumultX)
