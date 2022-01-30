@@ -109,7 +109,6 @@ hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve
 
 # > 豆瓣电影和电视剧添加便捷播放按钮(2022.01.28https://github.com/I-am-R-E/QuantumultX)
 ^https?:\/\/m\.douban\.com\/movie\/subject\/\d+\/ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/DouBan.js
-hostname = api.meiease.cn
 
 # > Picsart(2022.01.21 https://github.com/I-am-R-E/QuantumultX)
 ^https?:\/\/api\.meiease\.cn\/shop\/subscription\/validate url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Picsart.js
