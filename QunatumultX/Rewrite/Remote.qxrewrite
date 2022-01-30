@@ -1,4 +1,4 @@
-hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve.weibo.com,*.video.qq.com,amdc.m.taobao.com,api.gamer.com.tw,api.m.jd.com,api.meiease.c*,api.picsart.c*,api.resso.app,api.vuevideo.net,api.weibo.cn,apic.musixmatch.com,license.pdfexpert.com,mapi.weibo.com,mp.weixin.qq.com,newdrugs.dxy.cn,trade-acs.m.taobao.com,sk.ulysses.app,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, aweme*.snssdk.com, *.kuwo.cn, *.musical.ly, p.du.163.com, vsco.co, *.my10api.com, sp.kaola.com, r.inews.qq.com, account.wps.cn, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com,api.meiease.c*, splice.oracle.*.com, bmall.camera360.com,photos.adobe.io, dayone.*, sk.ulysses.app, backend.getdrafts.com,lcs-mobile-cops.adobe.io, h5.ele.me, i.meituan.com,weixin110.qq.com,*.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, *.grammarly.com, api.polaxiong.com, api-cs.intsig.net,tieba.baidu.com,boxer.baidu.com,zhidao.baidu.com,*.zhihu.com,jump2.bdimg.com,app.biliintl.com,socketio.ctrip.com,vira.llsapp.com, apiios.xiangha.com, 39.97.157.167,buy.itunes.apple.com,cutisanapi.imuuzi.com,m.douban.com
+hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve.weibo.com,*.video.qq.com,amdc.m.taobao.com,api.gamer.com.tw,api.m.jd.com,api.meiease.c*,api.picsart.c*,api.resso.app,api.vuevideo.net,api.weibo.cn,apic.musixmatch.com,license.pdfexpert.com,mapi.weibo.com,mp.weixin.qq.com,newdrugs.dxy.cn,trade-acs.m.taobao.com,sk.ulysses.app,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, aweme*.snssdk.com, *.kuwo.cn, *.musical.ly, p.du.163.com, vsco.co, *.my10api.com, account.wps.cn, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com,api.meiease.c*, splice.oracle.*.com, bmall.camera360.com,photos.adobe.io, dayone.*, sk.ulysses.app, backend.getdrafts.com,lcs-mobile-cops.adobe.io, h5.ele.me, i.meituan.com,weixin110.qq.com,*.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, *.grammarly.com, api.polaxiong.com, api-cs.intsig.net,tieba.baidu.com,boxer.baidu.com,zhidao.baidu.com,*.zhihu.com,jump2.bdimg.com,app.biliintl.com,socketio.ctrip.com,vira.llsapp.com, apiios.xiangha.com, 39.97.157.167,buy.itunes.apple.com,cutisanapi.imuuzi.com,m.douban.com
 #api.termius.com,
 #################################################################################
 
@@ -20,8 +20,11 @@ hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve
 ^https?:\/\/creditcardapp\.bankcomm\.com\/mapp\/common\/getPopAds\.do$  url reject-200
 
 # 微博应用内去广告 (By yichahucha https://github.com/yichahucha/surge/tree/master)
-^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad.php|\/wbapplua\/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
+;微博应用内去广告 by yichahucha
 ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(statuses\/(unread|extend|positives\/get|(friends|video)(\/|_)(mix)?timeline)|stories\/(video_stream|home_list)|(groups|fangle)\/timeline|profile\/statuses|comments\/build_comments|photo\/recommend_list|service\/picfeed|searchall|cardlist|page|\!/photos\/pic_recommend_status|video\/tiny_stream_video_list|photo/info|remind/unread_count) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
+
+;微博启动页去广告 by yichahucha
+^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad.php|\/wbapplua\/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
 
 
 ;Bilibili SEA 解除 SIM 卡地区限制
@@ -60,7 +63,6 @@ hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve
 ^http://.+/amdc/mobileDispatch url script-request-body https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
 
 # Taobao App 显示历史价格 (By yichahucha https://github.com/yichahucha/surge/tree/master)
-
 ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail url script-response-body https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
 
 #################################################################################
@@ -73,12 +75,6 @@ hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve
 
 ;微信公众号去广告 by Choler&NobyDa
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
-
-# 网易考拉 去广告 (By Choler https://github.com/Choler/Surge)
-;^https://sp\.kaola\.com/api/openad$ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wykaola.js
-
-# 腾讯新闻 去广告 (By Choler https://github.com/Choler/Surge)
-;^https://r\.inews\.qq.com\/get(QQNewsUnreadList|RecommendList) url script-response-body https://github.com/Choler/Surge/raw/master/Script/QQNews.js
 
 #################################################################################
 
