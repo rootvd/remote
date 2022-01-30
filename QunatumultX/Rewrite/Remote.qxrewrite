@@ -213,5 +213,3 @@ hostname = api.meiease.cn
 
 #phothop&PSexpress (By langkhach https://github.com/langkhach270389/Quantumult-X-LK)
 ^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/photoshop.js
-
-
