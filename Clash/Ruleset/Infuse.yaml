@@ -30,5 +30,5 @@ payload:
   - DOMAIN-SUFFIX, odysseyplus.site,Streaming
   - DOMAIN-SUFFIX, line.emby.men,Streaming
   - DOMAIN-SUFFIX, aaa.ax,Streaming
-  #DOMAIN-SUFFIX, ikoumi.com
+  #- DOMAIN-SUFFIX, ikoumi.com
   - DOMAIN-SUFFIX, yoona.vip,Streaming
