@@ -7,9 +7,17 @@ DOMAIN-SUFFIX, trakt.tv
 DOMAIN-SUFFIX, plex.tv
 IP-CIDR, 139.177.187.32/32, no-resolve
 DOMAIN-KEYWORD, 139-177-187-32
-DOMAIN-SUFFIX, plex.hotkids.fun
+
+DOMAIN-SUFFIX, plex.hotkids.eu
 DOMAIN-KEYWORD, 168-138-209-168
 IP-CIDR, 168.138.209.168/32, no-resolve
+
+DOMAIN-SUFFIX, funmedia.10101.io
+DOMAIN-KEYWORD, 150-230-14-170
+IP-CIDR, 150.230.14.170/32, no-resolve
+
+DOMAIN-SUFFIX, plex.mandalorian.top
+DOMAIN-SUFFIX, solitary-scene-48f1.100continue.workers.dev
 
 # > Emby
 DOMAIN-SUFFIX, emby.wtf
