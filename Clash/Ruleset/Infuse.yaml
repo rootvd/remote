@@ -1,36 +1,36 @@
 payload:
  # > subtitles
-  - DOMAIN-SUFFIX, opensubtitles.org,Streaming
-  - DOMAIN-SUFFIX, trakt.tv,Streaming
+  - DOMAIN-SUFFIX, opensubtitles.org
+  - DOMAIN-SUFFIX, trakt.tv
  # > Plex
  # - DOMAIN-SUFFIX, plex.direct
-  - DOMAIN-SUFFIX, plex.tv,Streaming
+  - DOMAIN-SUFFIX, plex.tv
   - IP-CIDR, 139.177.187.32/32, no-resolve
-  - DOMAIN-KEYWORD, 139-177-187-32,Streaming
+  - DOMAIN-KEYWORD, 139-177-187-32
 
-  - DOMAIN-SUFFIX, plex.hotkids.eu,Streaming
-  - DOMAIN-KEYWORD, 168-138-209-168,Streaming
+  - DOMAIN-SUFFIX, plex.hotkids.eu
+  - DOMAIN-KEYWORD, 168-138-209-168
   - IP-CIDR, 168.138.209.168/32, no-resolve
  
   - DOMAIN-SUFFIX, funmedia.10101.io
-  - DOMAIN-KEYWORD, 150-230-14-170,Streaming
+  - DOMAIN-KEYWORD, 150-230-14-170
   - IP-CIDR, 150.230.14.170/32, no-resolve
   - DOMAIN-KEYWORD, 213-173-33-119, Streaming
   - IP-CIDR, 213.173.33.119/32, no-resolve
 
-  - DOMAIN-SUFFIX, plex.mandalorian.top,Streaming
-  - DOMAIN-SUFFIX, solitary-scene-48f1.100continue.workers.dev,Streaming
+  - DOMAIN-SUFFIX, plex.mandalorian.top
+  - DOMAIN-SUFFIX, solitary-scene-48f1.100continue.workers.dev
 
  # > Emby
-  - DOMAIN-SUFFIX, emby.wtf,Streaming
-  - DOMAIN-SUFFIX, pornemby.club,Streaming
-  - DOMAIN-SUFFIX, jmsooo.com,Streaming
-  - DOMAIN-SUFFIX, charontv.com,Streaming
-  - DOMAIN-SUFFIX, cjpc.cc,Streaming
-  - DOMAIN-SUFFIX, riches.cloud,Streaming
-  - DOMAIN-SUFFIX, embyclub.com,Streaming
-  - DOMAIN-SUFFIX, odysseyplus.site,Streaming
-  - DOMAIN-SUFFIX, line.emby.men,Streaming
-  - DOMAIN-SUFFIX, aaa.ax,Streaming
+  - DOMAIN-SUFFIX, emby.wtf
+  - DOMAIN-SUFFIX, pornemby.club
+  - DOMAIN-SUFFIX, jmsooo.com
+  - DOMAIN-SUFFIX, charontv.com
+  - DOMAIN-SUFFIX, cjpc.cc
+  - DOMAIN-SUFFIX, riches.cloud
+  - DOMAIN-SUFFIX, embyclub.com
+  - DOMAIN-SUFFIX, odysseyplus.site
+  - DOMAIN-SUFFIX, line.emby.men
+  - DOMAIN-SUFFIX, aaa.ax
   #- DOMAIN-SUFFIX, ikoumi.com
-  - DOMAIN-SUFFIX, yoona.vip,Streaming
+  - DOMAIN-SUFFIX, yoona.vip
