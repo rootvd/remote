@@ -15,8 +15,8 @@ payload:
   - DOMAIN-SUFFIX, funmedia.10101.io
   - DOMAIN-KEYWORD, 150-230-14-170,Streaming
   - IP-CIDR, 150.230.14.170/32, no-resolve
-  - IP-CIDR, 213.173.33.119, no-resolve
-  - DOMAIN-KEYWORD, 213-173-33-119,Streaming
+  - IP-CIDR, 213.173.33.119/32, no-resolve
+  - DOMAIN-KEYWORD, 213-173-33-119, Streaming
 
   - DOMAIN-SUFFIX, plex.mandalorian.top,Streaming
   - DOMAIN-SUFFIX, solitary-scene-48f1.100continue.workers.dev,Streaming
