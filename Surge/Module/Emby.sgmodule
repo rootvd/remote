@@ -1,5 +1,5 @@
-#!name=解锁拓展模块
-#!desc=解锁拓展模块
+#!name=Emby 解锁拓展模块
+#!desc=Emby 解锁拓展模块
 
 [Script]
 播放解锁 = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/rartv/EmbyPublic/test/surge/unlock.js,debug=false
