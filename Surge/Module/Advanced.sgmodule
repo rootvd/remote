@@ -26,7 +26,7 @@ proxy-test-url = http://www.gstatic.com/generate_204
 geoip-maxmind-url =  https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/lite/Country.mmdb
 
 # IPv6 支持（关闭）
-ipv6 = false
+ipv6 = true
 # ------
 
 # ---(Wi-Fi 访问)---
