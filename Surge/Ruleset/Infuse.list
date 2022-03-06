@@ -27,6 +27,8 @@ DOMAIN-SUFFIX, solitary-scene-48f1.100continue.workers.dev
 DOMAIN-SUFFIX, pubsub.plex.tv
 
 DOMAIN-SUFFIX, plex.yoona.vip
+DOMAIN-SUFFIX, plex.yoona.xyz
+DOMAIN-SUFFIX, plex.yoona.vpn
 IP-CIDR, 184.105.148.84/32, no-resolve
 DOMAIN-KEYWORD, 184-105-148-84
 
