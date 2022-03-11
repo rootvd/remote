@@ -131,6 +131,9 @@ melogin.cn = server:syslib
 router.asus.com = server:syslib
 tplinklogin.net = server:syslib
 tplogin.cn = server:syslib
+*.router = server:syslib
+*.movie= server:syslib
+*.mediav = server:syslib
 
 [Header Rewrite]
 [URL Rewrite]
