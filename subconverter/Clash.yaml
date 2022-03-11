@@ -8,7 +8,7 @@
 # redir-port: 7892
 
 allow-lan: true
-
+mix-port: 1080
 # 仅适用于设置 allow-lan 为 true 时
 # "*": 绑定所有 IP 地址
 # 192.168.122.11: 绑定单个 IPv4 地址
