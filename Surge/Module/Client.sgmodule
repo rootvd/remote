@@ -5,7 +5,7 @@
 [Rule]
 # Client
 # Remote
-PROCESS-NAME,parsecd,DIRECT
+# PROCESS-NAME,parsecd,DIRECT
 PROCESS-NAME,ToDesk,DIRECT
 PROCESS-NAME,ToDesk_Service,DIRECT
 # > Proxy
