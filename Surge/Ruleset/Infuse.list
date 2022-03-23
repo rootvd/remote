@@ -3,8 +3,6 @@ DOMAIN-SUFFIX, opensubtitles.org
 DOMAIN-SUFFIX, trakt.tv
 DOMAIN-SUFFIX, themoviedb.org
 
-
-
 # > Plex
 # DOMAIN-SUFFIX, plex.direct
 DOMAIN-SUFFIX, plex.tv
@@ -38,7 +36,6 @@ IP-CIDR, 184.105.148.89/32, no-resolve
 DOMAIN-KEYWORD, 184-105-148-89
 IP-CIDR, 103.157.251.19/32, no-resolve
 DOMAIN-KEYWORD, 103-157-251-19
-
 
 # > Emby
 DOMAIN-SUFFIX, emby.wtf

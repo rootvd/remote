@@ -1,17 +1,18 @@
 payload:
- # > subtitles
+  # > subtitles
   - DOMAIN-SUFFIX, opensubtitles.org
   - DOMAIN-SUFFIX, trakt.tv
- # > Plex
- # - DOMAIN-SUFFIX, plex.direct
+  - DOMAIN-SUFFIX, themoviedb.org
   - DOMAIN-SUFFIX, plex.tv
+
+  # > Plex
   - IP-CIDR, 139.177.187.32/32, no-resolve
   - DOMAIN-KEYWORD, 139-177-187-32
-
+  
   - DOMAIN-SUFFIX, plex.hotkids.eu
   - DOMAIN-KEYWORD, 168-138-209-168
   - IP-CIDR, 168.138.209.168/32, no-resolve
- 
+  
   - DOMAIN-SUFFIX, funmedia.10101.io
   - DOMAIN-KEYWORD, 150-230-14-170
   - IP-CIDR, 150.230.14.170/32, no-resolve
@@ -20,17 +21,23 @@ payload:
   
   - DOMAIN-KEYWORD, 213-173-33-119
   - IP-CIDR, 213.173.33.119/32, no-resolve
-
+  
   - DOMAIN-SUFFIX, plex.mandalorian.top
   - DOMAIN-SUFFIX, solitary-scene-48f1.100continue.workers.dev
-
+  
   - DOMAIN-SUFFIX, pubsub.plex.tv
   
   - DOMAIN-SUFFIX, plex.yoona.vip
+  - DOMAIN-SUFFIX, plex.yoona.xyz
+  - DOMAIN-SUFFIX, plex.yoona.vpn
   - IP-CIDR, 184.105.148.84/32, no-resolve
   - DOMAIN-KEYWORD, 184-105-148-84
+  - IP-CIDR, 184.105.148.89/32, no-resolve
+  - DOMAIN-KEYWORD, 184-105-148-89
+  - IP-CIDR, 103.157.251.19/32, no-resolve
+  - DOMAIN-KEYWORD, 103-157-251-19
 
- # > Emby
+  # > Emby
   - DOMAIN-SUFFIX, emby.wtf
   - DOMAIN-SUFFIX, pornemby.club
   - DOMAIN-SUFFIX, jmsooo.com
