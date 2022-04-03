@@ -25,7 +25,7 @@ proxy-test-url = http://www.gstatic.com/generate_204
 geoip-maxmind-url =  https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/lite/Country.mmdb
 
 # IPv6 支持（关闭）
-ipv6 = true
+ipv6 = false
 # ------
 
 # ---(Wi-Fi 访问)---
@@ -192,6 +192,7 @@ tplogin.cn = server:syslib
 ^https?:\/\/(www.)?nicelabel\.cc\/ https://www.nicelabel.com/zh/ 302
 ^https?:\/\/(www.)?ntfsformac\.cc\/ https://www.tuxera.com/products/tuxera-ntfs-for-mac-cn/ 302
 ^https?:\/\/(www.)?ntfsformac\.cn\/ https://china.paragon-software.com/home-mac/ntfs-for-mac/ 302
+^https?:\/\/(www.)?officesoftcn\.com\/ https://www.microsoft.com/zh-cn/microsoft-365 302
 ^https?:\/\/(www.)?overturechina\.com\/ https://sonicscores.com/ 302
 ^https?:\/\/(www.)?passwordrecovery\.cn\/ https://cn.elcomsoft.com/aopr.html 302
 ^https?:\/\/(www.)?pdfexpert\.cc\/ https://pdfexpert.com/zh 302
