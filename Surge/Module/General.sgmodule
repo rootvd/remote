@@ -44,6 +44,7 @@ socks5-listen = 0.0.0.0:1090
 
 external-controller-access = vpn+9@0.0.0.0:10999
 http-api-web-dashboard = true
+http-api-tls = false
 # ------
 
 # ---(兼容性)---
