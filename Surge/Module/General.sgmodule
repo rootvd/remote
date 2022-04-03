@@ -46,7 +46,7 @@ external-controller-access = vpn+9@0.0.0.0:10999
 http-api-web-dashboard = true
 
 # > HTTP-API-TLS
-http-api-tls = false
+http-api-tls = vpn+9@0.0.0.0:11999
 # ------
 
 # ---(兼容性)---
