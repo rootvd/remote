@@ -43,7 +43,7 @@ socks5-listen = 0.0.0.0:1090
 # 如果允许由 Wi-Fi 控制则将「127.0.0.1」修改为「0.0.0.0」
 
 external-controller-access = vpn+9@0.0.0.0:10999
-# http-api-web-dashboard = true
+http-api-web-dashboard = true
 # ------
 
 # ---(兼容性)---
