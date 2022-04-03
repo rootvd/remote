@@ -43,9 +43,11 @@ socks5-listen = 0.0.0.0:1090
 # 如果允许由 Wi-Fi 控制则将「127.0.0.1」修改为「0.0.0.0」
 external-controller-access = vpn+9@0.0.0.0:10999
 
-# > HTTP-API-TLS
+# > Web Dashboard
 http-api-web-dashboard = true
-allow-wifi-access = false
+
+# > HTTP API TLS
+# HTTP API 可以让另一个 App 或者设备通过 HTTP API 控制 Surge 功能
 http-api = vpn+9@0.0.0.0:11999
 # ------
 
