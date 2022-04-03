@@ -41,12 +41,12 @@ socks5-listen = 0.0.0.0:1090
 # ---(远程控制器)---
 # 允许 Surge 请求查看器或 Surge CLI 进行管理控制。
 # 如果允许由 Wi-Fi 控制则将「127.0.0.1」修改为「0.0.0.0」
-
-external-controller-access = vpn+9@0.0.0.0:10999
-http-api-web-dashboard = true
+external-controller-access = @0.0.0.0:10999
 
 # > HTTP-API-TLS
-http-api-tls = vpn+9@0.0.0.0:11999
+http-api-web-dashboard = true
+allow-wifi-access = false
+http-api = vpn+9@0.0.0.0:11999
 # ------
 
 # ---(兼容性)---
