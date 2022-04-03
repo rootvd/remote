@@ -17,7 +17,7 @@ proxy-test-url = http://www.gstatic.com/generate_204
 # test-timeout = 5
 
 # TLS 引擎
-#tls-provider = openssl
+tls-provider = openssl
 
 # GeoIP 数据库
 # geoip-maxmind-url =  https://raw.githubusercontent.com/JMVoid/ipip2mmdb/release/Country.mmdb
