@@ -1,5 +1,5 @@
-hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve.weibo.com,*.video.qq.com,amdc.m.taobao.com,api.gamer.com.tw,api.m.jd.com,api.meiease.c*,api.picsart.c*,api.resso.app,api.vuevideo.net,api.weibo.cn,apic.musixmatch.com,license.pdfexpert.com,mapi.weibo.com,mp.weixin.qq.com,newdrugs.dxy.cn,trade-acs.m.taobao.com,sk.ulysses.app,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, aweme*.snssdk.com, *.kuwo.cn, vsco.co, *.my10api.com, account.wps.cn, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com,api.meiease.c*, splice.oracle.*.com, bmall.camera360.com,photos.adobe.io, dayone.*, sk.ulysses.app, backend.getdrafts.com,lcs-mobile-cops.adobe.io, weixin110.qq.com,*.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, *.grammarly.com, api.polaxiong.com, api-cs.intsig.net,tieba.baidu.com,boxer.baidu.com,zhidao.baidu.com,*.zhihu.com,jump2.bdimg.com,app.biliintl.com,socketio.ctrip.com,vira.llsapp.com, apiios.xiangha.com, 39.97.157.167,buy.itunes.apple.com,cutisanapi.imuuzi.com,m.douban.com,*.wallpaperscraft.com
-#api.termius.com,api.tidal.com
+hostname = ios.prod.ftl.netflix.com,*.uve.weibo.com,*.video.qq.com,amdc.m.taobao.com,api.m.jd.com,api.picsart.c*,api.resso.app,api.vuevideo.net,api.weibo.cn,apic.musixmatch.com,license.pdfexpert.com,mapi.weibo.com,mp.weixin.qq.com,trade-acs.m.taobao.com,sk.ulysses.app,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, aweme*.snssdk.com, *.kuwo.cn, vsco.co, *.my10api.com, account.wps.cn, xy-viva.kakalili.com, biz.caiyunapp.com, api.meiease.c*, splice.oracle.*.com, bmall.camera360.com,photos.adobe.io, dayone.*, backend.getdrafts.com,lcs-mobile-cops.adobe.io, weixin110.qq.com,*.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, *.grammarly.com, api.polaxiong.com, ap*.intsig.net,tieba.baidu.com,boxer.baidu.com,zhidao.baidu.com,*.zhihu.com,jump2.bdimg.com,app.biliintl.com,socketio.ctrip.com,vira.llsapp.com, apiios.xiangha.com, 39.97.157.167,buy.itunes.apple.com,cutisanapi.imuuzi.com,m.douban.com,*.wallpaperscraft.com,*91*:8080, *my10api*:8080
+#api.termius.com,api.tidal.com,api.gamer.com.tw
 #################################################################################
 
 ;微信 App 内被屏蔽链接快捷跳转
@@ -118,9 +118,6 @@ hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve
 
 #################################################################################
 
-# Keep 解锁私人课程和动作库 (QX存在bug 该脚本可能无法生效) By NobyDa  https://github.com/NobyDa/Script/tree/master
-;^https:\/\/api\.gotokeep\.com\/(.+\/subject|.+\/dynamic) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Keep.js
-
 # PicsArt美易 pro By NobyDa https://github.com/NobyDa/Script/tree/master
 ;^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/PicsArt.js
 
@@ -135,7 +132,7 @@ hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve
 ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js
 
 # 91短视频 By NobyDa https://github.com/NobyDa/Script/tree/master
-^https?:\/\/.+\.(my10api|(.*91.*))\.(com|tips|app|xyz)(:\d{2,5})?\/api.php$ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/91.js
+^https?:\/\/.+?\.(my10api|(.*91.*))\.(com|tips|app|xyz)(:\d{2,5}|)\/api.php$ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/91.js
 
 # VUE Vlog Pro By NoByDa https://github.com/NobyDa/Script/tree/master
 ^https?:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js
@@ -143,11 +140,8 @@ hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve
 # VSCO滤镜VIP NoByDa https://github.com/NobyDa/Script/tree/master
 ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
 
-# 扫描全能王 pro
-^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js
-
 # 小影 解锁Vip (By @hiepkimcdtk55)
-^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
+^https:\/\/xy-viva\.kakalili\.com\/api\/rest\/u\/vipVerifyReceipt url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js
 
 # 酷我音乐SVIP (By yxiaocai)
 ^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js
@@ -184,7 +178,7 @@ hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve
 # https:\/\/api\.termius\.com\/api\/.+\/bulk\/account\/ url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/terminus.js
 
 #CamScanner (By langkhach https://github.com/langkhach270389/Quantumult-X-LK)
-^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/camscaner.js
+# ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/camscaner.js
 
 #camera360 (By langkhach https://github.com/langkhach270389/Quantumult-X-LK)
 ^https:\/\/bmall\.camera360\.com\/api\/(iap\/check-receipt$|mix\/getinfo$) url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/camera360.js
@@ -206,9 +200,6 @@ hostname = ios.prod.ftl.netflix.com,*.bilibili.com,*.iqiyi.com,*.smzdm.com,*.uve
 
 #grammarly (By langkhach https://github.com/langkhach270389/Quantumult-X-LK)
 ^https:\/\/subscription\.grammarly\.com\/api\/v1$ url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/grammarly.js
-
-#ulysses (By langkhach https://github.com/langkhach270389/Quantumult-X-LK)
-;^https:\/\/sk\.ulysses\.app\/api\/v1\/itunes_receipt_verify$ url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/ulysses.js
 
 #draft (By langkhach https://github.com/langkhach270389/Quantumult-X-LK)
 ^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/draft.js
