@@ -23,13 +23,13 @@ DOMAIN-KEYWORD, 213-173-33-119
 IP-CIDR, 213.173.33.119/32, no-resolve
 
 DOMAIN-SUFFIX, plex.mandalorian.top
-DOMAIN-SUFFIX, solitary-scene-48f1.100continue.workers.dev
+DOMAIN-SUFFIX, 100continue.workers.dev
 DOMAIN-KEYWORD, 192-18-135-194
 IP-CIDR, 192.18.135.194/32, no-resolve
 
 DOMAIN-SUFFIX, pubsub.plex.tv
-DOMAIN-SUFFIX, plex.yoona.vip
 
+DOMAIN-SUFFIX, plex.yoona.vip
 IP-CIDR, 184.105.148.1/24, no-resolve
 DOMAIN-KEYWORD, 184-105-148-84
 IP-CIDR, 103.157.251.19/32, no-resolve
