@@ -28,8 +28,7 @@ DOMAIN-KEYWORD, 192-18-135-194
 IP-CIDR, 192.18.135.194/32, no-resolve
 
 DOMAIN-SUFFIX, pubsub.plex.tv
-
-DOMAIN-SUFFIX, plex.yoona.vip
+DOMAIN-SUFFIX, plex.yoona.xyz
 IP-CIDR, 184.105.148.1/24, no-resolve
 DOMAIN-KEYWORD, 184-105-148-84
 IP-CIDR, 103.157.251.19/32, no-resolve
