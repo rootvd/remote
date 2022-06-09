@@ -34,7 +34,6 @@ Direct = direct
 🇭🇰广港02 = https, 183.240.9.29, 29980, username=442993652168396800, password=2ef91648-089f-4c81-b34d-06f072ec51dd, skip-cert-verify=true, tfo=true
 🇭🇰广港03 = https, 183.240.9.30, 29980, username=442993652168396800, password=2ef91648-089f-4c81-b34d-06f072ec51dd, skip-cert-verify=true, tfo=true
 🇭🇰广港04 = https, 183.240.9.31, 29980, username=442993652168396800, password=2ef91648-089f-4c81-b34d-06f072ec51dd, skip-cert-verify=true, tfo=true
-
 🇸🇬 深新 = https, 120.232.251.206, 29979, username=442993652168396800, password=2ef91648-089f-4c81-b34d-06f072ec51dd, skip-cert-verify=true, tfo=true
 🇸🇬 广新01 = https, 183.240.9.28, 29979, username=442993652168396800, password=2ef91648-089f-4c81-b34d-06f072ec51dd, skip-cert-verify=true, tfo=true
 🇸🇬 广新02 = https, 183.240.9.28, 29982, username=442993652168396800, password=2ef91648-089f-4c81-b34d-06f072ec51dd, skip-cert-verify=true, tfo=true
@@ -68,33 +67,3 @@ HK = select, include-all-proxies=true, policy-regex-filter=🇭🇰
 SG = select, include-all-proxies=true, policy-regex-filter=🇸🇬
 
 [Rule]
-DOMAIN-SUFFIX,evernote.com,Proxy
-DOMAIN-SUFFIX,dlercloud.com,Proxy
-# RULESET
-RULE-SET,SYSTEM,Direct
-# 
-# 国内流媒体
-RULE-SET,https://github.com/DivineEngine/Profiles/raw/master/Surge/Ruleset/StreamingMedia/StreamingCN.list,Direct
-# Apple
-RULE-SET,https://github.com/DivineEngine/Profiles/raw/master/Surge/Ruleset/Extra/Apple/Apple.list,Apple
-# 代理
-RULE-SET,https://github.com/DivineEngine/Profiles/raw/master/Surge/Ruleset/Global.list,Proxy
-RULE-SET,https://github.com/DivineEngine/Profiles/raw/master/Surge/Ruleset/Extra/Microsoft/OneDrive.list,Proxy
-# 直连
-RULE-SET,https://github.com/DivineEngine/Profiles/raw/master/Surge/Ruleset/China.list,Direct
-# 
-RULE-SET,LAN,Direct
-GEOIP,CN,Direct
-FINAL,Proxy,dns-failed
-
-[URL Rewrite]
-# Redirect Google Search Service
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
-
-# Redirect HTTP to HTTPS
-^https?:\/\/(www.)?taobao\.com\/ https://taobao.com/ 302
-^https?:\/\/(www.)?jd\.com\/ https://www.jd.com/ 302
-^https?:\/\/(www.)?mi\.com\/ https://www.mi.com/ 302
-^https?:\/\/you\.163\.com\/ https://you.163.com/ 302
-^https?:\/\/(www.)?suning\.com/ https://suning.com/ 302
-^https?:\/\/(www.)?yhd\.com https://yhd.com/ 302
