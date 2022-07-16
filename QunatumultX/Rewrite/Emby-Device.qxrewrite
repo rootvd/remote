@@ -1,7 +1,11 @@
 hostname = *.mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, *.pornemby.club, *.charontv.com, *.cjpc.cc, *.riches.cloud, *.embyclub.com, *.odysseyplus.site, *.line.emby.men, *.aaa.ax, *.yoona.vip, emby.ikoumi.com, router.ikoumi.com
 
+^http?:\/\/.+\.odysseyplus\.site url request-header (Device=")iPhone(") request-header $1Apple TV$2
+
+
 ^https?:\/\/.+\.odysseyplus\.site url request-header (Device=”)iPhone(“) request-header $1Apple TV$2
 ^http?:\/\/.+\.odysseyplus\.site url request-header (Device=”)iPhone(“) request-header $1Apple TV$2
+
 
 # ^http?:\/\/.+\.odysseyplus\.site header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
 
