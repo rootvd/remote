@@ -4,4 +4,4 @@ proxies:
   - {name: MacOS-Http, server: MacOS.server, port: 1080, type: http}
   - {name: MacOS-Socks, server: MacOS.server, port: 1090, type: socks5}
   - {name: op-Http, server: op.server, port: 1080, type: http}
-  - {name: op-Socks, server: op.Router, port: 1080, type: socks5}
+  - {name: op-Socks, server: op.server, port: 1080, type: socks5}

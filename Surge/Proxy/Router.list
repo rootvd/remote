@@ -1,17 +1,25 @@
 proxies:
-  - name: MacOS-Http
+  - name: Surge-Http
     type: http
-    server: MacOS.Router
+    server: Surge.Server
     port: "1080"
   - name: MacOS-Socks
     type: socks5
-    server: MacOS.Router
+    server: Surge.Server
     port: "1090"
-  - name: MacOS-Http
+    - name: MacOS-Http
     type: http
-    server: N1.Router
+    server: MacOS.Server
     port: "1080"
   - name: MacOS-Socks
     type: socks5
-    server: N1.Router
+    server: MacOS.Server
+    port: "1090"
+  - name: op-Http
+    type: http
+    server: op.server
+    port: "1080"
+  - name: op-Socks
+    type: socks5
+    server: op.server
     port: "1080"
