@@ -7,7 +7,7 @@ proxies:
     type: socks5
     server: Surge.Server
     port: "1090"
-    - name: MacOS-Http
+  - name: MacOS-Http
     type: http
     server: MacOS.Server
     port: "1080"
