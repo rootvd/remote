@@ -1,0 +1,6 @@
+#!name= ipv6-false
+#!desc= 按需开启
+
+[General]
+ipv6 = false
+ipv6-vif = auto
