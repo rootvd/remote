@@ -26,7 +26,7 @@ geoip-maxmind-url =  https://raw.githubusercontent.com/alecthw/mmdb_china_ip_lis
 
 # IPv6 支持（关闭）
 #ipv6 = true
-ipv6 = false
+#ipv6 = false
 # ------
 
 # ---(Wi-Fi 访问)---
