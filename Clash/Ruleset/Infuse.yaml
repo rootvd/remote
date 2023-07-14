@@ -3,7 +3,7 @@ payload:
   - DOMAIN-SUFFIX, opensubtitles.org
   - DOMAIN-SUFFIX, trakt.tv
   - DOMAIN-SUFFIX, themoviedb.org
-  - DOMAIN-SUFFIX, plex.tv
+  - DOMAIN-SUFFIX, plex.direct
 
   # > Plex
   - DOMAIN-SUFFIX, plex.vv.gd
