@@ -1,6 +1,0 @@
-#!name= ipv6
-#!desc= 按需开启
-
-[General]
-ipv6 = newvpn
-ipv6-vif = auto
