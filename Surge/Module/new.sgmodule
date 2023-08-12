@@ -1,3 +1,28 @@
-# 解锁了「模块」功能的用户可以使用 General.sgmodule 后可移除 [URL Rewrite] 及 [MITM] 的「hostname = www.google.cn,api.abema.io」部分
-# 建议使用 General.sgmodule，其他 .sgmodule 按需加入
-# 未解锁「模块」功能的用户不要删除以下内容，参照说明(https://github.com/DivineEngine/Profiles/tree/master/Surge)使用快捷指令更新相关内容。
+# > Firebase Cloud Messaging
+mtalk.google.com = 108.177.125.188
+
+# > Google Dl
+dl.google.com = server:119.29.29.29
+dl.l.google.com = server:119.29.29.29
+update.googleapis.com = server:119.29.29.29
+
+# > PlayStation
+*.dl.playstation.net = server:119.29.29.29
+
+# > Router Admin Panel
+amplifi.lan = server:syslib // Ubiquiti Amplifi Router
+router.synology.com = server:syslib // Synology Router
+sila.razer.com = server:syslib // Razer Sila Router
+router.asus.com = server:syslib // Asus Router
+routerlogin.net = server:syslib // Netgear Router
+orbilogin.com = server:syslib // Netgear Obri Router
+www.LinksysSmartWiFi.com = server:syslib // Linksys Router
+LinksysSmartWiFi.com = server:syslib // Linksys Router
+myrouter.local = server:syslib // Linksys Router
+www.miwifi.com = server:syslib // Xiaomi Mi WiFi Router
+miwifi.com = server:syslib // Xiaomi Mi WiFi Router
+mediarouter.home = server:syslib // Huawei Router
+tplogin.cn = server:syslib // TP-Link Router
+tplinklogin.net = server:syslib // TP-Link Router
+melogin.cn = server:syslib // MERCURY Router
+falogin.cn = server:syslib // FAST Router
