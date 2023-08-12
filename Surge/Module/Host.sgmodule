@@ -1,0 +1,12 @@
+#!name=Root Host
+#!desc=Host
+
+[Host]
+# > Router Admin Panel
+falogin.cn = server:syslib
+melogin.cn = server:syslib
+router.asus.com = server:syslib
+tplinklogin.net = server:syslib
+tplogin.cn = server:syslib
+*.router = server:syslib
+*.server = 10.0.100.1
