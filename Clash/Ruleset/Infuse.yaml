@@ -31,11 +31,11 @@ payload:
 
   - DOMAIN-SUFFIX, pubsub.plex.tv
 
-  - DOMAIN-SUFFIX, plex.yoona.vip
-  - IP-CIDR, 184.105.148.1/24, no-resolve
-  - DOMAIN-KEYWORD, 184-105-148-84
-  - IP-CIDR, 103.157.251.19/32, no-resolve
-  - DOMAIN-KEYWORD, 103-157-251-19
+  #- DOMAIN-SUFFIX, plex.yoona.vip
+  #- IP-CIDR, 184.105.148.1/24, no-resolve
+  #- DOMAIN-KEYWORD, 184-105-148-84
+  #- IP-CIDR, 103.157.251.19/32, no-resolve
+  #- DOMAIN-KEYWORD, 103-157-251-19
 
   # > Emby
   - DOMAIN-SUFFIX, emby.wtf
