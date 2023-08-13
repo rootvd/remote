@@ -24,10 +24,10 @@ payload:
   - DOMAIN-KEYWORD, 213-173-33-119
   - IP-CIDR, 213.173.33.119/32, no-resolve
   
-  - DOMAIN-SUFFIX, plex.mandalorian.top
-  - DOMAIN-SUFFIX, continue.workers.dev
-  - DOMAIN-KEYWORD, 192-18-135-194
-  - IP-CIDR, 192.18.135.194/32, no-resolve
+  #- DOMAIN-SUFFIX, plex.mandalorian.top
+  #- DOMAIN-SUFFIX, continue.workers.dev
+  #- DOMAIN-KEYWORD, 192-18-135-194
+  #- IP-CIDR, 192.18.135.194/32, no-resolve
 
   - DOMAIN-SUFFIX, pubsub.plex.tv
 
