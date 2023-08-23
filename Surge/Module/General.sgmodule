@@ -56,7 +56,12 @@ http-api = vpn+9@0.0.0.0:11999
 # 兼容模式 (仅 iOS)
 # compatibility-mode = 0
 # 跳过代理
-skip-proxy = %APPEND% passenger.t3go.cn, www.baidu.com, yunbusiness.ccb.com, 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local, 169.254.0.0/16, 224.0.0.0/4, 240.0.0.0/4, 123.1.100.0/21
+skip-proxy = %APPEND% passenger.t3go.cn, www.baidu.com, yunbusiness.ccb.com, 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local, 169.254.0.0/16, 224.0.0.0/4, 240.0.0.0/4, 123.1.100.0/21, 127.0.0.1/32, 192.168.0.0/16, ::1/128, fc00::/7, fd00::/8, fe80::/10, ff00::/8, 2001::/32, 2001:db8::/32, 2002::/16, ::ffff:0:0:0:0/1, ::ffff:128:0:0:0/1, iosapps.itunes.apple.com
+
+
+skip-proxy = %APPEND% localhost, *.local, captive.apple.com, cable.auth.com, www.baidu.com, yunbusiness.ccb.com, 127.0.0.1/32, 192.168.0.0/16, ::1/128, fc00::/7, fd00::/8, fe80::/10, ff00::/8, 2001::/32, 2001:db8::/32, 2002::/16, ::ffff:0:0:0:0/1, ::ffff:128:0:0:0/1, iosapps.itunes.apple.com
+
+
 # 排除简单主机名
 exclude-simple-hostnames = true
 
@@ -73,7 +78,8 @@ use-default-policy-if-wifi-not-primary = false
 # 联通 116.116.116.116
 // doh-format=json
 // dns-server = https://neatdns.ustclug.org/resolve
-dns-server = 119.29.29.29, 223.5.5.5, 223.6.6.6, 180.76.76.76, system
+# > DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
+dns-server = system, 119.29.29.29, 119.28.28.28, 223.5.5.5, 223.6.6.6, 8.8.8.8
 // doh-server = https://47.108.56.233/dns-query, https://118.31.13.131/dns-query, https://120.25.25.166/dns-query, https://139.224.112.177/dns-query, https://59.110.53.209/dns-query, https://doh.rixcloud.dev/dns-query
 
 # 从 /etc/hosts 读取 DNS 记录
@@ -96,7 +102,7 @@ show-error-page-for-reject = true
 # Always Real IP Hosts
 # 当 Surge VIF 处理 DNS 问题时，此选项要求 Surge 返回一个真正的 IP 地址，而不是一个假 IP 地址。
 # DNS 数据包将被转发到上游 DNS 服务器。
-always-real-ip = msftconnecttest.com, msftncsi.com, *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com,  *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+always-real-ip = %APPEND% *.msftconnecttest.com, msftncsi.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com,  *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
 
 # Hijack DNS
 # 默认情况下，Surge 只返回发送到 Surge DNS 地址的 DNS 查询的假 IP 地址 (198.18.0.2)。
@@ -119,22 +125,18 @@ tun-excluded-routes = %APPEND% 239.255.255.250/32
 # ------
 
 [Replica]
-# ---(实验性功能)---
 # 0 为关闭，1 为开启
 # > 隐藏 Apple 请求
-hide-apple-request=0
+ hide-apple-request = 0
 # > 隐藏崩溃追踪器请求
-hide-crash-reporter-request=1
+ hide-crash-reporter-request = 1
 # > 隐藏 UDP 会话
-hide-udp=0
+ hide-udp = 0
 # > 关键词过滤器
 # none（关闭关键词过滤器） /whitelist（blacklist（仅记录包含关键字的请求）） /blacklist（仅记录不包含关键字的请求） /pattern（匹配通配符的请求）
 # keyword-filter-type = none
 # > 关键词
 # keyword-filter = (null)
-# ------
-
-[Host]
 
 [URL Rewrite]
 # Redirect Google Search Service
@@ -222,9 +224,17 @@ hide-udp=0
 bstar_login = type=http-request,pattern=^https?:\/\/passport\.biliintl\.com\/x\/intl\/passport-login\/(sms\/send|reg\/sms|oauth2\/access_token|login\/sms),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Rewrite/bstar.js,script-update-interval=0
 bstar_play = type=http-request,pattern=^https?:\/\/app\.biliintl\.com\/(intl\/gateway\/v\d\/app\/data\/report\/heartbeat\/mobile|x\/(history|reply)/v\d/add),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Rewrite/bstar.js,script-update-interval=0
 
+[Header Rewrite]
+# 百度贴吧重定向
+ ^https?+:\/\/(?:c\.)?+tieba\.baidu\.com\/(?>f|p) header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
+^https?+:\/\/jump2\.bdimg\.com\/(?>f|p) header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
+# 百度知道重定向
+ ^https?+:\/\/zhidao\.baidu\.com header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
+# 知乎网页重定向
+ ^https?+:\/\/www\.zhihu\.com\/question header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
+
 [MITM]
 hostname = %APPEND% www.google.cn,www.firefox.com.cn,api.*.abema-tv.com,app.biliintl.com,passport.biliintl.com
-
 
 [Host]
 # > Firebase Cloud Messaging
@@ -255,3 +265,41 @@ tplogin.cn = server:syslib // TP-Link Router
 tplinklogin.net = server:syslib // TP-Link Router
 melogin.cn = server:syslib // MERCURY Router
 falogin.cn = server:syslib // FAST Router
+
+# > Apple
+networking.apple = server:https://doh.dns.apple.com/dns-query // Apple
+# *.apple.com = server:https://doh.dns.apple.com/dns-query // Apple.com
+*.icloud.com = server:https://doh.dns.apple.com/dns-query // iCloud.com
+
+# > Alibaba
+*.alibaba.cn = server:223.5.5.5 // 阿里巴巴
+*.alibaba.com.cn = server:223.5.5.5 // 阿里巴巴
+*.china.alibaba.com = server:223.5.5.5 // Alibaba 中国
+*.1688.com = server:223.5.5.5 // 1688
+*.taobao.com = server:223.5.5.5 // 淘宝
+*.tbcache.com = server:223.5.5.5 // 淘宝 缓存
+*.tmall.com = server:223.5.5.5 // 天猫
+*.alicdn.com = server:223.5.5.5 // 阿里 CDN
+*.aliyundrive.com = server:223.5.5.5 // 阿里云盘
+*.aliyun.* = server:223.5.5.5 // 阿里云
+*.aliyuncdn.* = server:223.5.5.5 // 阿里云 CDN
+*.aliyunddos????.com = server:223.5.5.5 // 阿里云 DDoS防护
+*.aliyuncs.com = server:223.5.5.5 // 阿里云API服务
+*.aliyundunwaf.com = server:223.5.5.5 // 阿里云Web应用防火墙
+*.aliapp.com = server:223.5.5.5 // 云引擎应用平台
+*.aliapp.org = server:223.5.5.5 // 上云平台
+*.alibabausercontent.com = server:223.5.5.5 // 阿里用户上传资料
+*.mmstat.com = server:223.5.5.5 // mmstat 数据统计 广告追踪
+tb.cn = server:223.5.5.5 // 淘宝短网址
+
+# > Taiwan
+# 中华电信
+*.cht.com.tw  = server:https://dns.hinet.net/dns-query // 中华电信
+*.hinet.net = server:https://dns.hinet.net/dns-query // 中华电信HiNet
+*.emome.net = server:https://dns.hinet.net/dns-query // 中华电信emome
+# So-net
+# so-net.net.tw = server:ns1.so-net.net.tw // So-net Entertainment Taiwan
+# so-net.tw = server:ns1.so-net.net.tw // So-net Entertainment Taiwan
+# Taiwan Network Information Center
+*.tw = server:https://dns.twnic.tw/dns-query // TWNIC DNS
+*.taipei = server:https://dns.twnic.tw/dns-query // TWNIC DNS
