@@ -1,4 +1,4 @@
-#!name=0 TUN Only
+#!name=Rootvd TUN Only
 #!desc=启用 Tun Only 模式
  //，强制 80 端口流量使用 HTTP 引擎处理并打开解密 TCP 流量
 
