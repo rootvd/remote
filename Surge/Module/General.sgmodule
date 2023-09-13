@@ -207,9 +207,9 @@ tb.cn = server:223.5.5.5 // 淘宝短网址
 
 [URL Rewrite]
 # Redirect Google Search Service
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 ^https?://(www.)?g.cn https://www.google.com 302
 ^https?://(www.)?google.cn https://www.google.com 302
+
 
 # Redirect Google Maps Service
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
