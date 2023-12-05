@@ -7,8 +7,8 @@ payload:
 
   # > Plex
   - DOMAIN-SUFFIX, plex.vv.gd
-  - DOMAIN-KEYWORD, 202-61-243-231
-  - IP-CIDR, 202.61.243.231/32, no-resolve
+  - DOMAIN-KEYWORD, 89-58-1-192
+  - IP-CIDR, 89.58.1.192/32, no-resolve
   
   - IP-CIDR, 139.177.187.32/32, no-resolve
   - DOMAIN-KEYWORD, 139-177-187-32
