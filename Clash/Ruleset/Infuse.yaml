@@ -4,9 +4,10 @@ payload:
   - DOMAIN-SUFFIX, trakt.tv
   - DOMAIN-SUFFIX, themoviedb.org
   - DOMAIN-SUFFIX, plex.direct
-
+  - DOMAIN-SUFFIX, workers.dev
   # > Plex
   - DOMAIN-SUFFIX, plex.vv.gd
+  
   - DOMAIN-KEYWORD, 89-58-1-192
   - IP-CIDR, 89.58.1.192/32, no-resolve
   
