@@ -15,11 +15,11 @@ proxies:
     type: socks5
     server: MacOS.Server
     port: "1090"
-  - name: op-Http
+  - name: OpenWrt-Http
     type: http
     server: op.server
     port: "1080"
-  - name: op-Socks
+  - name: OpenWrt-Socks
     type: socks5
     server: op.server
     port: "1080"
