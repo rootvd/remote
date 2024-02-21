@@ -1,29 +1,11 @@
+#!name=aliyun签到
+#!category=签到
+#!desc=aliyun
 
-# > Firebase Cloud Messaging
-mtalk.google.com = 108.177.125.188
+[Script]
+aliyun = type=cron, cronexp="0 6,12 * * *", script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=60, wake-system=1
 
-# > Google Dl
-dl.google.com = server:119.29.29.29
-dl.l.google.com = server:119.29.29.29
-update.googleapis.com = server:119.29.29.29
+aDriveCheckIn = type=http-request, pattern=^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token, script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, requires-body=true, max-size=-1, timeout=60
 
-# > PlayStation
-*.dl.playstation.net = server:119.29.29.29
-
-# > Router Admin Panel
-amplifi.lan = server:syslib // Ubiquiti Amplifi Router
-router.synology.com = server:syslib // Synology Router
-sila.razer.com = server:syslib // Razer Sila Router
-router.asus.com = server:syslib // Asus Router
-routerlogin.net = server:syslib // Netgear Router
-orbilogin.com = server:syslib // Netgear Obri Router
-www.LinksysSmartWiFi.com = server:syslib // Linksys Router
-LinksysSmartWiFi.com = server:syslib // Linksys Router
-myrouter.local = server:syslib // Linksys Router
-www.miwifi.com = server:syslib // Xiaomi Mi WiFi Router
-miwifi.com = server:syslib // Xiaomi Mi WiFi Router
-mediarouter.home = server:syslib // Huawei Router
-tplogin.cn = server:syslib // TP-Link Router
-tplinklogin.net = server:syslib // TP-Link Router
-melogin.cn = server:syslib // MERCURY Router
-falogin.cn = server:syslib // FAST Router
+[MITM]
+hostname = %APPEND% auth.alipan.com, auth.aliyundrive.com
