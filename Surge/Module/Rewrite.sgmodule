@@ -83,6 +83,6 @@
 # AICoin
 ^http:\/\/(www.)?aicoin\.cn\/$ https://www.aicoin.com/ 302
 
-# Block Ads Start
-
-# Block Ads End
+[MITM]
+skip-server-cert-verify = true
+hostname = www.google.cn,www.firefox.com.cn,api.abema.io

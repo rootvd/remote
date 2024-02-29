@@ -1,5 +1,6 @@
-#!name=Rootvd Genernal Settings
+#!name=Advanced Settings
 #!desc=高级设置及通用的优化
+#!category=Profile
 
 [General]
 # ---(通用)---
@@ -16,24 +17,20 @@ proxy-test-url = http://www.gstatic.com/generate_204
 # > 测试超时（秒）
 test-timeout = 5
 
-# TLS 引擎
-tls-provider = openssl
-
 # GeoIP 数据库
 # geoip-maxmind-url =  https://raw.githubusercontent.com/JMVoid/ipip2mmdb/release/Country.mmdb
-geoip-maxmind-url =  https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/Country.mmdb
-# geoip-maxmind-url =  https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/lite/Country.mmdb
+# geoip-maxmind-url =  https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/Country.mmdb
+geoip-maxmind-url = https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb
 
 # IPv6 支持（关闭）
-#ipv6 = true
-#ipv6 = false
+ipv6 = false
 # ------
 
 # ---(Wi-Fi 访问)---
 #  允许 Wi-Fi 访问 (仅 iOS，若允许远程访问将「false」改为「true」)
-allow-wifi-access = false
-wifi-access-http-port = 6152
-wifi-access-socks5-port = 6153
+# allow-wifi-access = false
+# wifi-access-http-port = 6152
+# wifi-access-socks5-port = 6153
 #  允许 Wi-Fi 访问 (仅 macOS，若允许远程访问将「127.0.0.1」改为「0.0.0.0」)
 http-listen = 0.0.0.0:1080
 socks5-listen = 0.0.0.0:1090
@@ -42,29 +39,18 @@ socks5-listen = 0.0.0.0:1090
 # ---(远程控制器)---
 # 允许 Surge 请求查看器或 Surge CLI 进行管理控制。
 # 如果允许由 Wi-Fi 控制则将「127.0.0.1」修改为「0.0.0.0」
+
 external-controller-access = vpn+9@0.0.0.0:10999
-
-# > Web Dashboard
-http-api-web-dashboard = true
-
-# > HTTP API TLS
-# HTTP API 可以让另一个 App 或者设备通过 HTTP API 控制 Surge 功能
-http-api = vpn+9@0.0.0.0:11999
+# http-api-web-dashboard = true
 # ------
 
 # ---(兼容性)---
 # 兼容模式 (仅 iOS)
 # compatibility-mode = 0
 # 跳过代理
-skip-proxy = %APPEND% passenger.t3go.cn, www.baidu.com, yunbusiness.ccb.com, 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local, 169.254.0.0/16, 224.0.0.0/4, 240.0.0.0/4, 127.0.0.1/32, 192.168.0.0/16, ::1/128, fc00::/7, fd00::/8, fe80::/10, ff00::/8, 2001::/32, 2001:db8::/32, 2002::/16, ::ffff:0:0:0:0/1, ::ffff:128:0:0:0/1, iosapps.itunes.apple.com
-
-#skip-proxy = %APPEND% localhost, *.local, captive.apple.com, cable.auth.com, www.baidu.com, yunbusiness.ccb.com, 127.0.0.1/32, 192.168.0.0/16, ::1/128, fc00::/7, fd00::/8, fe80::/10, ff00::/8, 2001::/32, 2001:db8::/32, 2002::/16, ::ffff:0:0:0:0/1, ::ffff:128:0:0:0/1, iosapps.itunes.apple.com
-
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local, 169.254.0.0/16, 224.0.0.0/4, 240.0.0.0/4, 123.1.100.0/21
 # 排除简单主机名
-exclude-simple-hostnames = true
-
-# > Network framwork
-network-framework = false
+ exclude-simple-hostnames = true
 
 # SSID 组策略
 # 当 Wi-Fi 不是首选网络时 SSID 组策略使用默认策略（仅 macOS 版）
@@ -74,12 +60,10 @@ use-default-policy-if-wifi-not-primary = false
 # ---(DNS 服务器)(如无必要不建议使用 DNS over HTTPS)---
 # 电信 118.118.118.118
 # 联通 116.116.116.116
-// doh-format=json
-// dns-server = https://neatdns.ustclug.org/resolve
-# > DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
-dns-server = system, 119.29.29.29, 119.28.28.28, 223.5.5.5, 223.6.6.6, 8.8.8.8
-// doh-server = https://47.108.56.233/dns-query, https://118.31.13.131/dns-query, https://120.25.25.166/dns-query, https://139.224.112.177/dns-query, https://59.110.53.209/dns-query, https://doh.rixcloud.dev/dns-query
-
+# doh-format=json
+# dns-server = https://neatdns.ustclug.org/resolve
+dns-server = 119.29.29.29, 223.5.5.5, 180.76.76.76, system
+# doh-server = https://47.108.56.233/dns-query, https://118.31.13.131/dns-query, https://120.25.25.166/dns-query, https://139.224.112.177/dns-query, https://59.110.53.209/dns-query, https://doh.rixcloud.dev/dns-query
 # 从 /etc/hosts 读取 DNS 记录
 read-etc-hosts = true
 
@@ -92,212 +76,53 @@ read-etc-hosts = true
 
 # ---(高级)---
 # 日志级别
-loglevel = notify
+ loglevel = notify
 
 # 当遇到 REJECT 策略时返回错误页
-show-error-page-for-reject = true
+ show-error-page-for-reject = true
 
 # Always Real IP Hosts
 # 当 Surge VIF 处理 DNS 问题时，此选项要求 Surge 返回一个真正的 IP 地址，而不是一个假 IP 地址。
 # DNS 数据包将被转发到上游 DNS 服务器。
-always-real-ip = %APPEND% *.msftconnecttest.com, msftncsi.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com,  *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+always-real-ip = msftconnecttest.com, msftncsi.com, *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com,  *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+
+# > TCP Force HTTP Hosts
+# 让 Surge 把 TCP 连接当作 HTTP 请求来处理。Surge HTTP 引擎将处理这些请求，所有的高级功能，如捕获、重写和脚本等都可以使用。
+force-http-engine-hosts = *.ott.cibntv.net,123.59.31.1,119.18.193.135,122.14.246.33,175.102.178.52
 
 # Hijack DNS
 # 默认情况下，Surge 只返回发送到 Surge DNS 地址的 DNS 查询的假 IP 地址 (198.18.0.2)。
 # 有些设备或软件总是使用硬编码的 DNS 服务器。 (例如 Google Speakers 总是使用 8.8.8.8)。 您可以使用此选项劫持查询，以获得一个假地址。
 # hijack-dns = 8.8.8.8:53, 8.8.4.4:53
 
-# TCP Force HTTP Hosts
-# 让 Surge 把 TCP 连接当作 HTTP 请求来处理。Surge HTTP 引擎将处理这些请求，所有的高级功能，如捕获、重写和脚本等都可以使用。
-# KOOWO - 123.59.31.1,119.18.193.135, 122.14.246.33, 175.102.178.52
-# TencentVideo - 116.253.24.*, 175.6.26.*, 220.169.153.*
-force-http-engine-hosts = *.ott.cibntv.net, 123.59.31.1,119.18.193.135, 122.14.246.33, 175.102.178.52, 116.253.24.*, 175.6.26.*, 220.169.153.*
-
 # VIF Excluded Routes
 # Surge VIF 只能处理 TCP 和 UDP 协议。使用此选项可以绕过特定的 IP 范围，允许所有流量通过。
-#tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 169.254.0.0/16, 224.0.0.0/4, 240.0.0.0/4, 239.255.255.250/32
-tun-excluded-routes = %APPEND% 239.255.255.250/32
+# tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 169.254.0.0/16, 224.0.0.0/4, 240.0.0.0/4, 123.1.100.0/21, 239.255.255.250/32
 # VIF Included Routes
 # 默认情况下，Surge VIF 接口会声明自己是默认路由。但是，由于 Wi-Fi 接口的路由较小，有些流量可能不会通过 Surge VIF 接口。使用此选项可以添加一条较小的路由。
 # tun-included-routes = 192.168.1.12/32
 # ------
 
 [Replica]
+# ---(实验性功能)---
 # 0 为关闭，1 为开启
 # > 隐藏 Apple 请求
- hide-apple-request = 0
+hide-apple-request=0
 # > 隐藏崩溃追踪器请求
- hide-crash-reporter-request = 1
+hide-crash-reporter-request=1
 # > 隐藏 UDP 会话
- hide-udp = 0
+hide-udp=0
 # > 关键词过滤器
 # none（关闭关键词过滤器） /whitelist（blacklist（仅记录包含关键字的请求）） /blacklist（仅记录不包含关键字的请求） /pattern（匹配通配符的请求）
 # keyword-filter-type = none
 # > 关键词
 # keyword-filter = (null)
+# ------
 
 [Host]
-# > Firebase Cloud Messaging
-mtalk.google.com = 108.177.125.188
-
-# > Google Dl
-dl.google.com = server:119.29.29.29
-dl.l.google.com = server:119.29.29.29
-update.googleapis.com = server:119.29.29.29
-
-# > PlayStation
-*.dl.playstation.net = server:119.29.29.29
-
 # > Router Admin Panel
-amplifi.lan = server:syslib // Ubiquiti Amplifi Router
-router.synology.com = server:syslib // Synology Router
-sila.razer.com = server:syslib // Razer Sila Router
-router.asus.com = server:syslib // Asus Router
-routerlogin.net = server:syslib // Netgear Router
-orbilogin.com = server:syslib // Netgear Obri Router
-www.LinksysSmartWiFi.com = server:syslib // Linksys Router
-LinksysSmartWiFi.com = server:syslib // Linksys Router
-myrouter.local = server:syslib // Linksys Router
-www.miwifi.com = server:syslib // Xiaomi Mi WiFi Router
-miwifi.com = server:syslib // Xiaomi Mi WiFi Router
-mediarouter.home = server:syslib // Huawei Router
-tplogin.cn = server:syslib // TP-Link Router
-tplinklogin.net = server:syslib // TP-Link Router
-melogin.cn = server:syslib // MERCURY Router
-falogin.cn = server:syslib // FAST Router
-
-# > Apple
-networking.apple = server:https://doh.dns.apple.com/dns-query // Apple
-# *.apple.com = server:https://doh.dns.apple.com/dns-query // Apple.com
-*.icloud.com = server:https://doh.dns.apple.com/dns-query // iCloud.com
-
-# > Alibaba
-*.alibaba.cn = server:223.5.5.5 // 阿里巴巴
-*.alibaba.com.cn = server:223.5.5.5 // 阿里巴巴
-*.china.alibaba.com = server:223.5.5.5 // Alibaba 中国
-*.1688.com = server:223.5.5.5 // 1688
-*.taobao.com = server:223.5.5.5 // 淘宝
-*.tbcache.com = server:223.5.5.5 // 淘宝 缓存
-*.tmall.com = server:223.5.5.5 // 天猫
-*.alicdn.com = server:223.5.5.5 // 阿里 CDN
-*.aliyundrive.com = server:223.5.5.5 // 阿里云盘
-*.aliyun.* = server:223.5.5.5 // 阿里云
-*.aliyuncdn.* = server:223.5.5.5 // 阿里云 CDN
-*.aliyunddos????.com = server:223.5.5.5 // 阿里云 DDoS防护
-*.aliyuncs.com = server:223.5.5.5 // 阿里云API服务
-*.aliyundunwaf.com = server:223.5.5.5 // 阿里云Web应用防火墙
-*.aliapp.com = server:223.5.5.5 // 云引擎应用平台
-*.aliapp.org = server:223.5.5.5 // 上云平台
-*.alibabausercontent.com = server:223.5.5.5 // 阿里用户上传资料
-*.mmstat.com = server:223.5.5.5 // mmstat 数据统计 广告追踪
-tb.cn = server:223.5.5.5 // 淘宝短网址
-
-# > Taiwan
-# 中华电信
-*.cht.com.tw  = server:https://dns.hinet.net/dns-query // 中华电信
-*.hinet.net = server:https://dns.hinet.net/dns-query // 中华电信HiNet
-*.emome.net = server:https://dns.hinet.net/dns-query // 中华电信emome
-# So-net
-# so-net.net.tw = server:ns1.so-net.net.tw // So-net Entertainment Taiwan
-# so-net.tw = server:ns1.so-net.net.tw // So-net Entertainment Taiwan
-# Taiwan Network Information Center
-*.tw = server:https://dns.twnic.tw/dns-query // TWNIC DNS
-*.taipei = server:https://dns.twnic.tw/dns-query // TWNIC DNS
-
-[URL Rewrite]
-# Redirect Google Search Service
-"^https?:\/\/(www.)?(g|google)\.cn" https://www.google.com 302
-
-# Redirect Google Maps Service
-"^https?:\/\/(ditu|maps).google\.cn" https://maps.google.com 302
-
-# Redirect HTTP to HTTPS
-^https?:\/\/(www.)?taobao\.com\/ https://taobao.com/ 302
-^https?:\/\/(www.)?jd\.com\/ https://www.jd.com/ 302
-^https?:\/\/(www.)?mi\.com\/ https://www.mi.com/ 302
-^https?:\/\/you\.163\.com\/ https://you.163.com/ 302
-^https?:\/\/(www.)?suning\.com\/ https://suning.com/ 302
-^https?:\/\/(www.)?yhd\.com\/ https://yhd.com/ 302
-
-# Redirect False to True
-# > Firefox - www.firefox.com.cn
-^https?:\/\/(www.)?firefox\.com\.cn\/(download\/)?$ https://www.mozilla.org/zh-CN/firefox/new/ 302
-# > IGN China to IGN Global
-^https?:\/\/(www.)?ign\.xn--fiqs8s\/ http://cn.ign.com/ccpref/us 302
-# > Fake Website Made By C&J Marketing
-^https?:\/\/(www.)?abbyychina\.com\/ https://www.abbyy.cn/ 302
-^https?:\/\/(www.)?alienskins\.cn\/ https://exposure.software/ 302
-^https?:\/\/(www.)?anydeskchina\.cn\/ https://anydesk.com/zhs 302
-^https?:\/\/(www.)?bartender\.cc\/ https://www.macbartender.com/ 302
-^https?:\/\/(www.)?(betterzipcn|betterzip)\.(com|net)\/ https://macitbetter.com/ 302
-^https?:\/\/(www.)?beyondcompare\.cc\/ https://www.scootersoftware.com/ 302
-^https?:\/\/(www.)?bingdianhuanyuan\.cn\/ https://www.faronics.com/zh-hans/products/deep-freeze 302
-^https?:\/\/(www.)?chemdraw\.com\.cn\/ https://www.perkinelmer.com.cn/ 302
-^https?:\/\/(www.)?codesoftchina\.com\/ https://www.teklynx.com/ 302
-^https?:\/\/(www.)?coreldrawchina\.com\/ https://www.coreldraw.com/cn/ 302
-^https?:\/\/(www.)?crossoverchina\.com\/ https://www.codeweavers.com/ 302
-^https?:\/\/(www.)?dongmansoft\.com\/ https://www.udongman.cn/ 302
-^https?:\/\/(www.)?earmasterchina\.cn\/ https://www.earmaster.com/ 302
-^https?:\/\/(www.)?easyrecoverychina\.com\/ https://www.ontrack.com/ 302
-^https?:\/\/(www.)?ediuschina\.com\/ https://www.grassvalley.com/ 302
-^https?:\/\/(www.)?flstudiochina\.com\/ https://www.image-line.com/ 302
-^https?:\/\/(www.)?folxchina\.cn\/ https://mac.eltima.com/cn/download-manager.html 302
-^https?:\/\/(www.)?formysql\.com\/ https://www.navicat.com.cn/ 302
-^https?:\/\/(www.)?guitarpro\.cc\/ https://www.guitar-pro.com/ 302
-^https?:\/\/(www.)?huishenghuiying\.com\.cn\/ https://www.coreldraw.com/cn/ 302
-^https?:\/\/(www.)?hypeapp\.cn\/ https://tumult.com/hype/ 302
-^https?:\/\/hypersnap\.mairuan\.com\/ https://www.hyperionics.com/ 302
-^https?:\/\/(www.)?iconworkshop\.cn\/ https://www.axialis.com/ 302
-^https?:\/\/(www.)?idmchina\.net\/ https://www.internetdownloadmanager.com/ 302
-^https?:\/\/(www.)?imazingchina\.com\/ https://imazing.com/zh 302
-^https?:\/\/(www.)?imindmap\.cc\/ https://www.ayoa.com/previously-imindmap/ 302
-^https?:\/\/(www.)?jihehuaban\.com\.cn\/ https://www.chartwellyorke.com/sketchpad/x24795.html 302
-^https?:\/\/hypersnap\.mairuan\.com\/ https://www.keyshot.com/ 302
-^https?:\/\/(www.)?kingdeecn\.cn\/ http://www.kingdee.com/ 302
-^https?:\/\/(www.)?logoshejishi\.com https://www.sothink.com/product/logo-design-software/ 302
-^https?:\/\/logoshejishi\.mairuan\.com\/ https://www.sothink.com/product/logo-design-software/ 302
-^https?:\/\/(www.)?luping\.net\.cn\/ https://www.techsmith.com/ 302
-^https?:\/\/(www.)?mathtype\.cn\/ https://www.dessci.com/ 302
-^https?:\/\/(www.)?mindmanager\.(cc|cn)\/ https://www.mindjet.com/cn/ 302
-^https?:\/\/(www.)?mindmapper\.cc\/ https://www.mindmapper.com/ 302
-^https?:\/\/(www.)?(mycleanmymac|xitongqingli)\.com\/ https://macpaw.com/ 302
-^https?:\/\/(www.)?nicelabel\.cc\/ https://www.nicelabel.com/zh/ 302
-^https?:\/\/(www.)?ntfsformac\.cc\/ https://www.tuxera.com/products/tuxera-ntfs-for-mac-cn/ 302
-^https?:\/\/(www.)?ntfsformac\.cn\/ https://china.paragon-software.com/home-mac/ntfs-for-mac/ 302
-^https?:\/\/(www.)?officesoftcn\.com\/ https://www.microsoft.com/zh-cn/microsoft-365 302
-^https?:\/\/(www.)?overturechina\.com\/ https://sonicscores.com/ 302
-^https?:\/\/(www.)?passwordrecovery\.cn\/ https://cn.elcomsoft.com/aopr.html 302
-^https?:\/\/(www.)?pdfexpert\.cc\/ https://pdfexpert.com/zh 302
-^https?:\/\/(www.)?photozoomchina\.com\/ https://www.benvista.com/ 302
-^https?:\/\/(www.)?shankejingling\.com\/ https://www.sothink.com/product/flashdecompiler/ 302
-^https?:\/\/cn\.ultraiso\.net\/ https://cn.ezbsystems.com/ultraiso/ 302
-^https?:\/\/(www.)?vegaschina\.cn\/ https://www.vegascreativesoftware.com/ 302
-^https?:\/\/(www.)?xshellcn\.com\/ https://www.netsarang.com/zh/xshell/ 302
-^https?:\/\/(www.)?yuanchengxiezuo\.com\/ https://www.teamviewer.com/ 302
-^https?:\/\/(www.)?zbrushcn\.com\/ https://pixologic.com/ 302
-
-# AbeamTV - api.*.abema-tv.com
-^https?:\/\/api\.[\w-]+\.abema-tv\.com\/v\d\/ip\/check - reject
-
-# bstar intl
-(^https?:\/\/app\.biliintl\.com\/(x\/)?(intl|dm|reply|history|v\d\/(fav|msgfeed)).+?)(&s_locale=zh-Hans_[A-Z]{2})(.+?)(&sim_code=\d+)(.+) $1&s_locale=zh-Hans_PH$6&sim_code=51503$8 header
-(^https?:\/\/passport\.biliintl\.com\/x\/intl\/passport-login\/.+)(&s_locale=zh-Hans_[A-Z]{2})(.+)(&sim_code=\d+)(.+) $1&s_locale=zh-Hans_PH$35&sim_code=51503$5 header
-
-# AICoin
-^http:\/\/(www.)?aicoin\.cn\/$ https://www.aicoin.com/ 302
-
-[Script]
-bstar_login = type=http-request,pattern=^https?:\/\/passport\.biliintl\.com\/x\/intl\/passport-login\/(sms\/send|reg\/sms|oauth2\/access_token|login\/sms),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Rewrite/bstar.js,script-update-interval=0
-bstar_play = type=http-request,pattern=^https?:\/\/app\.biliintl\.com\/(intl\/gateway\/v\d\/app\/data\/report\/heartbeat\/mobile|x\/(history|reply)/v\d/add),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Rewrite/bstar.js,script-update-interval=0
-
-[Header Rewrite]
-# 百度贴吧重定向
- ^https?+:\/\/(?:c\.)?+tieba\.baidu\.com\/(?>f|p) header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
-^https?+:\/\/jump2\.bdimg\.com\/(?>f|p) header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
-# 百度知道重定向
- ^https?+:\/\/zhidao\.baidu\.com header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
-# 知乎网页重定向
- ^https?+:\/\/www\.zhihu\.com\/question header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
-
-[MITM]
-hostname = %APPEND% www.google.cn,g.cn,www.g.cn,google.cn,ditu.google.cn,map.google.cn,www.firefox.com.cn,api.*.abema-tv.com,app.biliintl.com,passport.biliintl.com,.baidu.com, www.zhihu.com
+falogin.cn = server:syslib
+melogin.cn = server:syslib
+router.asus.com = server:syslib
+tplinklogin.net = server:syslib
+tplogin.cn = server:syslib
