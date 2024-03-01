@@ -1,3 +1,9 @@
-# > Region verification
-DOMAIN,dfp6rglgjqszk.cloudfront.net
-DOMAIN,d1k2us671qcoa.cloudfront.net
+# > Turkey Region
+DOMAIN-SUFFIX,mtcgame.com,
+DOMAIN-SUFFIX,turgame.com
+DOMAIN-SUFFIX,eturkcell.netmera.com
+DOMAIN-SUFFIX,com.tr
+DOMAIN-SUFFIX,mobile.useinsider.com
+DOMAIN-SUFFIX,ozan.com
+DOMAIN-SUFFIX,payten.com.tr
+DOMAIN-SUFFIX,fastlogin.com.tr
