@@ -83,5 +83,4 @@ http-request ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace-regex U
 
 [MITM]
 skip-server-cert-verify = true
-hostname = %APPEND%
-www.google.cn,www.firefox.com.cn,api.abema.io,*.baidu.com, www.zhihu.com
+hostname = %APPEND% www.google.cn,www.firefox.com.cn,api.abema.io,*.baidu.com, www.zhihu.com
