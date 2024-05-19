@@ -5,13 +5,15 @@ DOMAIN-SUFFIX, themoviedb.org
 
 # > Plex
 DOMAIN-SUFFIX, plex.direct
+DOMAIN-SUFFIX, plex.tv
 
 DOMAIN-SUFFIX, plex.vv.gd
 DOMAIN-KEYWORD, 89-58-1-192
 IP-CIDR, 89.58.1.192/32, no-resolve
-DOMAIN-SUFFIX, workers.dev
+DOMAIN-KEYWORD, 168-138-209-168
+IP-CIDR, 168.138.209.168/32, no-resolve
+#DOMAIN-SUFFIX, workers.dev
 
-DOMAIN-SUFFIX, plex.tv
 IP-CIDR, 139.177.187.32/32, no-resolve
 DOMAIN-KEYWORD, 139-177-187-32
 IP-CIDR, 139.162.14.127/32, no-resolve
