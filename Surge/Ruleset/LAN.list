@@ -1,5 +1,4 @@
 # > Local Area Network
-IP-CIDR,10.0.100.0/22
 DOMAIN,asusrouter.com
 DOMAIN,cp.cloudflare.com
 DOMAIN,detectportal.firefox.com
