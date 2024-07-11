@@ -62,7 +62,6 @@ use-default-policy-if-wifi-not-primary = false
 # 电信 118.118.118.118
 # 联通 116.116.116.116
 # doh-format=json
-# dns-server = https://neatdns.ustclug.org/resolve
 dns-server = system, 119.29.29.29, 223.5.5.5
 # doh-server = https://47.108.56.233/dns-query, https://118.31.13.131/dns-query, https://120.25.25.166/dns-query, https://139.224.112.177/dns-query, https://59.110.53.209/dns-query, https://doh.rixcloud.dev/dns-query
 # 从 /etc/hosts 读取 DNS 记录
