@@ -1,5 +1,6 @@
 #!name=Rootvd Rewrite
 #!desc=Rewrite
+#!category=Profile
 
 [Header Rewrite]
 # > 知乎（部分替换为手机百度 Quark 的 User-Agent）

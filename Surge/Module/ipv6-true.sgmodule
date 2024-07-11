@@ -1,5 +1,6 @@
 #!name= ipv6-true
 #!desc= 按需开启
+#!category=Profile
 
 [General]
 ipv6 = true

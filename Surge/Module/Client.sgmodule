@@ -1,5 +1,6 @@
 #!name=macOS Client Module
 #!desc=macOS Client DIRECT Rule
+#!category=Profile
 #!system=mac
 
 [Rule]

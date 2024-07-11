@@ -1,6 +1,7 @@
 #!name=Rootvd VIF Excluded Routes
 #!desc=LG ThinQ, 投屏, LocalSend
 #!category=Profile
+
 [General]
 tun-excluded-routes = %INSERT% 239.255.255.250/32, 224.0.0.167/32
 #tun-excluded-routes = %INSERT% 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 169.254.0.0/16, 224.0.0.0/4, 240.0.0.0/4, 239.255.255.250/32
