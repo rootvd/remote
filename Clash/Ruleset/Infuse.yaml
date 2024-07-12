@@ -3,14 +3,18 @@ payload:
   - DOMAIN-SUFFIX, opensubtitles.org
   - DOMAIN-SUFFIX, trakt.tv
   - DOMAIN-SUFFIX, themoviedb.org
-  - DOMAIN-SUFFIX, plex.direct
-  - DOMAIN-SUFFIX, workers.dev
+
   # > Plex
+  - DOMAIN-SUFFIX, plex.direct
+  - DOMAIN-SUFFIX, plex.tv
+  - DST-PORT,32400,DIRECT
+
   - DOMAIN-SUFFIX, plex.vv.gd
-  
   - DOMAIN-KEYWORD, 89-58-1-192
   - IP-CIDR, 89.58.1.192/32, no-resolve
-  
+  - DOMAIN-KEYWORD, 168-138-209-168
+  - IP-CIDR, 168.138.209.168/32, no-resolve
+  #DOMAIN-SUFFIX, workers.dev
   - IP-CIDR, 139.177.187.32/32, no-resolve
   - DOMAIN-KEYWORD, 139-177-187-32
   
