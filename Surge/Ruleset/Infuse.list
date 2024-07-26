@@ -6,6 +6,7 @@ DOMAIN-SUFFIX, themoviedb.org
 # > Plex
 DOMAIN-SUFFIX, plex.direct
 DOMAIN-SUFFIX, plex.tv
+DOMAIN-SUFFIX, plex.services
 DST-PORT,32400,DIRECT
 
 DOMAIN-SUFFIX, plex.vv.gd
