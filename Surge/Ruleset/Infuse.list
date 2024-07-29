@@ -8,7 +8,7 @@ DOMAIN-KEYWORD,plex
 DOMAIN-SUFFIX,plex.direct
 DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,plex.services
-DST-PORT,32400
+DEST-PORT,32400
 
 DOMAIN-SUFFIX,plex.vv.gd
 DOMAIN-KEYWORD,89-58-1-192
@@ -36,7 +36,7 @@ IP-CIDR,213.173.33.119/32,no-resolve
 #DOMAIN-SUFFIX,plex.mandalorian.top
 #DOMAIN-SUFFIX,continue.workers.dev
 #DOMAIN-KEYWORD,192-18-135-194
-#IP-CIDR,192.18.135.194/32, no-resolve
+#IP-CIDR,192.18.135.194/32,no-resolve
 
 # > Emby
 DOMAIN-SUFFIX,emby.wtf
