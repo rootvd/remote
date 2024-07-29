@@ -1,7 +1,7 @@
 # > Email
-USER-AGENT, *spark
+USER-AGENT,*spark
 PROCESS-NAME,*spark
-USER-AGENT, *Spark
+USER-AGENT,*Spark
 DOMAIN-SUFFIX,gmail.com
 DOMAIN-SUFFIX,outlook.com
 DOMAIN-SUFFIX,mail.me.com
