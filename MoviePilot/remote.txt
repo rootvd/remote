@@ -6,4 +6,4 @@
 
 #################剧集#################
 Wise.and.Foolish.Return => 民王R
-
+Zong.Shi.Lie.Zhuan.Da.Tang.Shi.Ren.Zhuan.S01 => 宗师列传.S02
