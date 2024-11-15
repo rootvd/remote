@@ -5,6 +5,7 @@
 
 
 #################剧集#################
+Octo.Mind.Investigator.Akari.Shinno => 感情搜查官 心野朱梨
 Tsuduis.Ordinary.Life.in.an.Otaku.World => 津津井小姐
 Wise.and.Foolish.Return => 民王R
 Zong.Shi.Lie.Zhuan.Da.Tang.Shi.Ren.Zhuan.S01 => 宗师列传.S02
