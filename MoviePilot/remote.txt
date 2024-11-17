@@ -10,6 +10,7 @@ Rurouni.Kenshin.-.Kyoto.Douran => 浪客剑心 －明治剑客浪漫谭－ 京�
 The.Fiery.Priest.2 => 热血司祭
 A.divorce.lawyer.Spider => 离婚律师 蜘蛛
 Arcane.Chinese.Voice => 英雄联盟：双城之战
+The.Intimate.Traitor => 如此亲密的背叛者
 Octo.Mind.Investigator.Akari.Shinno => 感情搜查官 心野朱梨
 Tsuduis.Ordinary.Life.in.an.Otaku.World => 津津井小姐
 Wise.and.Foolish.Return => 民王R
