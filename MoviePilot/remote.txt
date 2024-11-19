@@ -8,6 +8,13 @@
 Kekkon.Surutte.Hontou.Desuka => 听说你们要结婚
 Rurouni.Kenshin.-.Kyoto.Douran => 浪客剑心 －明治剑客浪漫谭－ 京都动乱
 The.Fiery.Priest.2 => 热血司祭
+Ultraman.Arc.Chinese.Voice => 亚刻奥特曼
+Ao.no.Exorcist.-.Yuki.no.Hate.Hen => 青之驱魔师
+Climbers.Feast => 下山メシ
+Kami.no.Tou-Ouji.no.Kikan => 神之塔
+The.Idol@master.Shiny.Colors.2nd => 偶像大师
+One.Piece.Gyojin.Tou-hen.S01 => 海贼王.S14
+Fangs.of.Fortune => 大梦归离
 A.divorce.lawyer.Spider => 离婚律师 蜘蛛
 Arcane.Chinese.Voice => 英雄联盟：双城之战
 The.Intimate.Traitor => 如此亲密的背叛者
