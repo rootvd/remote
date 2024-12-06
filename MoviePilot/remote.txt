@@ -5,6 +5,10 @@
 
 
 #################剧集#################
+tokimekibakudan => 心跳炸弹
+The.Iron.Squad.W => The Iron Squad 
+Takasugi-sans.Obento => 高杉家的爱心便当 
+Kodoku.no.gurume => 各自孤独的美食家
 Is.It.Wrong.to.Try.to.Pick.Up.Girls.in.a.Dungeon => 在地下城寻求邂逅是否搞错了什么
 Kekkon.Surutte.Hontou.Desuka => 听说你们要结婚
 Rurouni.Kenshin.-.Kyoto.Douran => 浪客剑心 －明治剑客浪漫谭－ 京都动乱
