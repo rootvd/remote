@@ -20,9 +20,9 @@ host-suffix, congecko.com
 host-suffix, kucoin.com
 host-suffix, ws-app.xcoinsystem.com
 host-suffix, kucoin.center
-DOMAIN-SUFFIX, huobihk.com
-DOMAIN-SUFFIX, bitgetimg.com
-DOMAIN-SUFFIX, bitgetapps.com
-DOMAIN-SUFFIX, bitget.fit
-DOMAIN-SUFFIX, bgportable.com
-DOMAIN-SUFFIX, bitget.com
+host-suffix, huobihk.com
+host-suffix, bitgetimg.com
+host-suffix, bitgetapps.com
+host-suffix, bitget.fit
+host-suffix, bgportable.com
+host-suffix, bitget.com
