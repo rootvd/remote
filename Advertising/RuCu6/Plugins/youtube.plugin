@@ -1,7 +1,7 @@
 #!name = YouTube
 #!desc = 移除广告。
 #!author = Maasea[https://github.com/Maasea/sgmodule], RuCu6[https://github.com/RuCu6]
-#!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/youtube.png
+#!icon = https://raw.githubusercontent.com/rootvd/remote/master/Advertising/RuCu6/Icons/app/youtube.png
 #!date = 2024-06-11 21:59:22
 #!select = 隐藏上传按钮, true, false
 #!select = 隐藏选段按钮, true, false
