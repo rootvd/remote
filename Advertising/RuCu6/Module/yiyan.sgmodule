@@ -1,0 +1,18 @@
+#!name=一言
+#!desc=解锁本地会员, 下载保存无水印。
+#!author=RuCu6[https://github.com/RuCu6]
+#!icon=https://raw.githubusercontent.com/rootvd/remote/master/Advertising/RuCu6/Icons/app/yiyan.png
+#!date=2024-10-01 15:35
+
+[Map Local]
+# 开屏广告
+^https:\/\/app\.yiyan\.art\/yiyan\/getsplashscreen\? data-type=text data="{}" status-code=200
+
+[Script]
+解锁本地会员 = type=http-response, pattern=^https:\/\/app\.yiyan\.art\/yiyan\/(?:checkpro|getuserinfoandbooklist|getvipproduct), script-path=https://raw.githubusercontent.com/rootvd/remote/master/Advertising/RuCu6/Scripts/break/yiyan.js, requires-body=true, timeout=10
+
+移除会员横幅 = type=http-response, pattern=^https:\/\/app\.yiyan\.art\/yiyan\/(?:getalltextcard|getuserinfoandbooklist), script-path=https://raw.githubusercontent.com/rootvd/remote/master/Advertising/RuCu6/Scripts/break/yiyan.js, requires-body=true, timeout=10
+
+[MITM]
+hostname = %APPEND% app.yiyan.art
+

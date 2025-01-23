@@ -1,0 +1,15 @@
+#!name=TestFlight
+#!desc=解除TestFlight的区域限制，支持tvOS。
+#!author=可莉🅥[https://gitlab.com/lodepuly/vpn_tool]
+#!icon=https://raw.githubusercontent.com/rootvd/remote/master/Advertising/RuCu6/Icons/app/testflight.png
+#!date=2024-08-07 16:25:33
+
+[General]
+skip-proxy = %APPEND% iosapps.itunes.apple.com
+
+[Script]
+body_rewrite_10 = type=http-request, pattern=^https:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*\/builds\/\d*\/install$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22replace-regex%22%2C%5B%5B%22%5C%22storefrontId%5C%22%20%3A%20%5C%22%5C%5Cd%7B6%7D-%5C%5Cd%7B2%7D%2C%5C%5Cd%7B2%7D%5C%22%2C%22%2C%22%5C%22storefrontId%5C%22%3A%5C%22143441-19%2C29%5C%22%2C%22%5D%5D%5D%5D
+
+[MITM]
+hostname = %APPEND% testflight.apple.com
+

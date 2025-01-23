@@ -1,0 +1,13 @@
+#!name=Emby Filter
+#!desc=Emby服务器分流。
+#!author=RuCu6[https://github.com/RuCu6]
+#!icon=https://raw.githubusercontent.com/rootvd/remote/master/Advertising/RuCu6/Icons/app/emby.png
+#!date=2024-10-03 02:20
+
+[Rule]
+# 普拉斯影业
+DOMAIN,emby-best.xeton.dev,DIRECT
+DOMAIN,jz.mcjoker.xyz,DIRECT
+# MisakaF
+DOMAIN,cdn.misakaf.org,DIRECT
+
