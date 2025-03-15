@@ -27,3 +27,6 @@ Octo.Mind.Investigator.Akari.Shinno => 感情搜查官 心野朱梨
 Tsuduis.Ordinary.Life.in.an.Otaku.World => 津津井小姐
 Wise.and.Foolish.Return => 民王R
 Zong.Shi.Lie.Zhuan.Da.Tang.Shi.Ren.Zhuan.S01 => 宗师列传.S02
+Madoka.Wakatsuki => 小圆26岁，在做实习医生
+Mystery.Apartment => 问题住宅
+The.Top.Secret => {[tmdbid=279898;type=tv]}
