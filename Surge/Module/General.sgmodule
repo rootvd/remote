@@ -32,8 +32,8 @@ ipv6 = false
 # wifi-access-http-port = 6152
 # wifi-access-socks5-port = 6153
 #  允许 Wi-Fi 访问 (仅 macOS，若允许远程访问将「127.0.0.1」改为「0.0.0.0」)
-http-listen = 0.0.0.0:1080
-socks5-listen = 0.0.0.0:1090
+#http-listen = 0.0.0.0:1080
+#socks5-listen = 0.0.0.0:1090
 # ------
 
 # ---(远程控制器)---
